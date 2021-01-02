@@ -6,7 +6,7 @@ import { ListingDetailOneComponent } from './ListingDetailOne/ListingDetailOne.c
 
 export const ListingRoutes: Routes = [
 
-    {path: 'list/full-width', component: ListFullWidthComponent},
+    //{path: 'list/full-width', component: ListFullWidthComponent},
     {path: 'appartement', component: GridFullWidthComponent},
     {path: 'bureau', component: GridFullWidthComponent},
     {path: 'studio', component: GridFullWidthComponent},

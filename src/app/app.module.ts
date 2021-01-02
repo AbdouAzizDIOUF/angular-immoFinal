@@ -32,12 +32,12 @@ function initializeKeycloak(keycloak: KeycloakService) {
     return () =>
         keycloak.init({
             config: {
-                 url:"http://immo-agence.fr:8889/auth/",
-                realm:"immoFront",
-                clientId:"angularKeycloak"
-               /* url: 'http://localhost:8889/auth/',
+                /* url:"http://immo-agence.fr:8889/auth/",
+                realm:"IMMO AGENCE",
+                clientId:"AngularImmoApp"*/
+                url: 'http://localhost:8889/auth/',
                 realm: 'immo-realmTest',
-                clientId: 'GuardTest',*/
+                clientId: 'GuardTest',
             },
             initOptions: {
                 onLoad: 'check-sso',

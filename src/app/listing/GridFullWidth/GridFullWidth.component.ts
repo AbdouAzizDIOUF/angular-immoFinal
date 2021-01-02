@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'grid-full-width',
@@ -7,6 +8,14 @@ import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/co
   encapsulation: ViewEncapsulation.None
 })
 export class GridFullWidthComponent implements OnInit{
+
+    public href: string;
+
+    public biens: any;
+    public appartements: any;
+    public burreaux: any;
+    public villas: any;
+    public terrains: any;
 
    Data : any = [
                      {
@@ -65,9 +74,28 @@ export class GridFullWidthComponent implements OnInit{
 
                   ];
                   
-   constructor(){}
+   constructor(public router: Router, ){}
 
-   ngOnInit(){}
+   ngOnInit(){
+
+       this.href = this.router.url;
+       console.log(this.href);
+       let tabURL = this.href.split('/');
+       console.log(tabURL);
+       console.log(tabURL[0]);
+       console.log(tabURL[1]);
+       console.log(tabURL[2]);
+       if(tabURL[1]=="biens"){
+           console.log("bienvenu dans l'espace reserve au biens");
+           if(tabURL[2]=="appartement"){
+                console.log("appartement commponent");
+           }else if(tabURL[2]=="bureau"){
+               console.log("bureau")
+           }else if(tabURL[2]=="terrain"){
+               console.log("terrain");
+           }
+       }
+   }
 
    ngAfterViewInit()
    {
