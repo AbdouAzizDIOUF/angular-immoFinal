@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/core';
+import {BienService} from '../../services/bien.service';
 
 @Component({
   selector: 'dashboard-one',
@@ -15,6 +16,7 @@ export class DashboardOneComponent implements OnInit{
 
 	popularCategoriesTitle : string = 'Catégories populaires';
 	popularCategoriesDesc  : string = 'Parcourir les catégories les plus désirables';
+
 	categories : any = [
 								{
 									title: 'appart',
@@ -57,6 +59,8 @@ export class DashboardOneComponent implements OnInit{
 
 	mostVisitedPlacesTitle : string = 'Nous sommes leader du domaine';
 	mostVisitedPlacesDesc  : string = 'Découvrez les biens immobiliers les mieux adaptes';
+
+
 	places : any = [
 							{
 								badge    : 'Disponible',
@@ -169,9 +173,20 @@ export class DashboardOneComponent implements OnInit{
 
 						];
 
-	constructor(){}
 
-	ngOnInit(){}
+	public biens: any;
+
+	constructor(private bienservice: BienService){}
+
+	ngOnInit(){
+		this.bienservice.getBiens()
+			.subscribe(data => {
+				//console.log(data);
+				this.biens = data;
+			}, error => {
+				console.log(error.message);
+			})
+	}
 
 	ngAfterViewInit()
 	{

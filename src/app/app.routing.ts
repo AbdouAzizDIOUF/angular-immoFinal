@@ -3,6 +3,9 @@ import { Routes } from '@angular/router';
 import { FrontendPanelLayoutComponent } from './layouts/frontendPanel/FrontendPanel.component';
 import {AboutComponent} from './pages/About/About.component';
 import {ContactComponent} from './pages/Contact/Contact.component';
+import {AdminPanelLayoutComponent} from './layouts/adminPanel/AdminPanelLayout.component';
+import {AuthGuardService} from './services/auth-guard.service';
+import {BookingComponent} from './pages/Booking/Booking.component';
 
 export const AppRoutes: Routes = [
     {
@@ -31,25 +34,24 @@ export const AppRoutes: Routes = [
         },
         {
           path: 'contact-us', component:ContactComponent
-        }
+        },
+        {
+          path: 'paiement',
+          component: BookingComponent,
+          canActivate: [AuthGuardService],
+          data: {roles: ['CLIENT']},
+        },
       ]
+    },
+    {
+      path: 'admin',
+      component: AdminPanelLayoutComponent,
+      canActivate: [AuthGuardService],
+      data: {roles: ['SUPERADMIN']},
+      children: [{
+        path: '',
+        loadChildren: () => import('./adminPages/admin.module').then(m => m.AdminModule)
+      }]
     },
 ];
 
-
-/*{
-     path: 'admin',
-     component: AdminPanelLayoutComponent,
-     children: [{
-       path: '',
-       loadChildren: () => import('./adminPages/admin.module').then(m => m.AdminModule)
-     }]
-   },*/
-/*{
-  path: 'session',
-  component: AuthLayoutComponent,
-  children: [{
-    path: '',
-    loadChildren: () => import('./session/session.module').then(m => m.SessionModule)
-  }]
-}*/

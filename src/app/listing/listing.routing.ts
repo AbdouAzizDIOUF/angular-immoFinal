@@ -6,7 +6,7 @@ import { ListingDetailOneComponent } from './ListingDetailOne/ListingDetailOne.c
 
 export const ListingRoutes: Routes = [
 
-   /* {path: 'list/full-width', component: ListFullWidthComponent},
+    {path: 'list/full-width', component: ListFullWidthComponent},
     {path: 'appartement', component: GridFullWidthComponent},
     {path: 'bureau', component: GridFullWidthComponent},
     {path: 'studio', component: GridFullWidthComponent},
@@ -20,7 +20,7 @@ export const ListingRoutes: Routes = [
     {path: 'list/bureau', component: ListFullWidthComponent},
     {path: 'list/studio', component: ListFullWidthComponent},
     {path: 'list/parcelle', component: ListFullWidthComponent},
-    {path: 'list/villa', component: ListFullWidthComponent},*/
+    {path: 'list/villa', component: ListFullWidthComponent},
 
 
 ];

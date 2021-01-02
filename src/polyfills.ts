@@ -82,3 +82,11 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+(window as any).global = window;
+// See: https://github.com/algolia/angular-instantsearch/issues/90
+(window as any).process = {
+    env: { DEBUG: undefined },
+    nextTick(){}
+};
+

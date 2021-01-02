@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/co
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import {KeycloakSecurityService} from '../../services/keycloak-security.service';
 
 @Component({
   selector: 'app-header',
@@ -16,19 +17,9 @@ export class HeaderComponent implements OnInit {
 
    isFixedClass : boolean = false; 
 
-   constructor(private router: Router){}
+   constructor(private router: Router, private keycloakSecurityService: KeycloakSecurityService){}
 
    ngOnInit(){
-      // this._router = this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
-      //    this.url = event.url;
-      //    if (this.isFixedHeader()) {
-      //       this.isFixedClass = true;
-      //    }
-      //    else
-      //    {
-      //       this.isFixedClass = false;
-      //    }
-      // });
    }
 
    isFixedHeader()
@@ -44,4 +35,28 @@ export class HeaderComponent implements OnInit {
    {
      
    }
+
+    onLogin() {
+        this.keycloakSecurityService.onLogin();
+    }
+
+    onLogout() {
+       this.keycloakSecurityService.onLogout();
+    }
+
+    onChangePassword() {
+        this.keycloakSecurityService.onChangePassword();
+    }
+
+    isAuthenticated(): boolean{
+        return this.keycloakSecurityService.isAuthenticated();
+    }
+
+    isAppManager(): boolean {
+        return this.keycloakSecurityService.isAppManager();
+    }
+
+    userDetail(value:string){
+        return this.keycloakSecurityService.userDetail(value);
+    }
 }

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="95310b31-8c15-436d-becc-4c2ad7f27bb2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/Header/Header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/Header/Header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/Header/Header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/Header/Header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/Header/Header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/Header/Header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/Menu/Menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/Menu/Menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/DashboardOne/DashboardOne.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/DashboardOne/DashboardOne.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/DashboardOne/DashboardOne.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/DashboardOne/DashboardOne.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globalFrontendComponents/Banner/Banner.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globalFrontendComponents/Banner/Banner.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globalFrontendComponents/PopuplarCategories/PopularCategories.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globalFrontendComponents/PopuplarCategories/PopularCategories.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/listing/GridFullWidth/GridFullWidth.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/listing/GridFullWidth/GridFullWidth.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/listing/listing.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/listing/listing.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProjectId" id="1kYIqVcc8bZnZbxaBRV8w4FY0VW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="js.last.introduce.type" value="LET" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/layouts" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projets\projet web avance\angular\angularTest\src\app\layouts" />
+      <recent name="E:\Projets\projet web avance\angular\angularTest\src\app\core" />
+      <recent name="E:\Projets\projet web avance\angular\angularTest\src\app" />
+      <recent name="E:\Projets\projet web avance\angular\src\assets\images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (angularListing)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/src/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (angularListing-e2e)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95310b31-8c15-436d-becc-4c2ad7f27bb2" name="Default Changelist" comment="" />
+      <created>1605871295634</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605871295634</updated>
+      <workItem from="1605871299218" duration="43580000" />
+      <workItem from="1606010834242" duration="16000" />
+      <workItem from="1608320474524" duration="3256000" />
+      <workItem from="1608364398878" duration="5000" />
+      <workItem from="1608364416214" duration="362000" />
+      <workItem from="1608364843970" duration="129000" />
+      <workItem from="1608365016119" duration="173000" />
+      <workItem from="1608392565672" duration="4457000" />
+      <workItem from="1608411745702" duration="43000" />
+      <workItem from="1608484323842" duration="2375000" />
+      <workItem from="1608573491122" duration="137000" />
+      <workItem from="1608642977040" duration="54000" />
+      <workItem from="1609072651670" duration="10379000" />
+      <workItem from="1609101539357" duration="3897000" />
+      <workItem from="1609109997652" duration="4559000" />
+      <workItem from="1609119958812" duration="67189000" />
+      <workItem from="1609293629815" duration="11239000" />
+      <workItem from="1609339776012" duration="13439000" />
+      <workItem from="1609365059153" duration="11197000" />
+      <workItem from="1609413900290" duration="4169000" />
+      <workItem from="1609432686549" duration="3710000" />
+      <workItem from="1609436416119" duration="101000" />
+      <workItem from="1609436526618" duration="168000" />
+      <workItem from="1609437013154" duration="150000" />
+      <workItem from="1609437201980" duration="43000" />
+      <workItem from="1609437302919" duration="3994000" />
+      <workItem from="1609450404322" duration="2521000" />
+      <workItem from="1609508651386" duration="241000" />
+      <workItem from="1609508902257" duration="7080000" />
+      <workItem from="1609516449923" duration="3783000" />
+      <workItem from="1609531069462" duration="8630000" />
+      <workItem from="1609542552983" duration="6585000" />
+      <workItem from="1609577118939" duration="5264000" />
+      <workItem from="1609598022337" duration="3242000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="511" y="286" width="567" height="361" key="#Notifications" timestamp="1609577296894">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="511" y="286" width="567" height="361" key="#Notifications/0.27.1600.873@0.27.1600.873" timestamp="1609577296894" />
+    <state x="527" y="262" key="#SCSS_Lint" timestamp="1609080323247">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="527" y="262" key="#SCSS_Lint/0.0.1600.860@0.0.1600.860" timestamp="1609080323247" />
+    <state x="593" y="214" key="#Web_Browsers" timestamp="1605964960020">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="593" y="214" key="#Web_Browsers/0.0.1600.860@0.0.1600.860" timestamp="1605964960020" />
+    <state x="608" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1609510496770">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="608" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" timestamp="1609510496770" />
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609083981430">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1609083981430" />
+    <state x="468" y="202" key="EditFileWatcherDialog" timestamp="1605983017119">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="468" y="202" key="EditFileWatcherDialog/0.0.1600.860@0.0.1600.860" timestamp="1605983017119" />
+    <state x="583" y="221" width="424" height="491" key="FileChooserDialogImpl" timestamp="1609294072265">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="583" y="221" width="424" height="491" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1609294072265" />
+    <state width="1554" height="197" key="GridCell.Tab.0.bottom" timestamp="1609540272553">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1557" height="111" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609283857337" />
+    <state width="1554" height="197" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1609540272553" />
+    <state width="1554" height="197" key="GridCell.Tab.0.center" timestamp="1609540272552">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1557" height="111" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1609283857337" />
+    <state width="1554" height="197" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1609540272552" />
+    <state width="1554" height="197" key="GridCell.Tab.0.left" timestamp="1609540272552">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1557" height="111" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1609283857337" />
+    <state width="1554" height="197" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1609540272552" />
+    <state width="1554" height="197" key="GridCell.Tab.0.right" timestamp="1609540272553">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1557" height="111" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1609283857337" />
+    <state width="1554" height="197" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1609540272553" />
+    <state x="300" y="102" width="1022" height="737" key="SettingsEditor" timestamp="1609293829618">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="300" y="74" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1609246460223" />
+    <state x="300" y="102" width="1022" height="737" key="SettingsEditor/0.27.1600.873@0.27.1600.873" timestamp="1609293829618" />
+    <state x="671" y="310" width="247" height="314" key="cloudConfig.SelfSettingsDialog" timestamp="1609437581047">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="671" y="310" width="247" height="314" key="cloudConfig.SelfSettingsDialog/0.27.1600.873@0.27.1600.873" timestamp="1609437581047" />
+    <state x="579" y="344" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609081717078">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="579" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1609081717078" />
+    <state x="579" y="376" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1600.873@0.27.1600.873" timestamp="1608365092313" />
+    <state x="520" y="174" key="refactoring.ChangeSignatureDialog" timestamp="1609154694546">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="520" y="174" key="refactoring.ChangeSignatureDialog/0.0.1600.860@0.0.1600.860" timestamp="1609154694546" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/services/appartement.service.ts</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/services/appartement.service.ts</url>
+          <line>43</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

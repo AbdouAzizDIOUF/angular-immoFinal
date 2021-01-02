@@ -1,0 +1,1102 @@
+<div class="dashboard-content">
+
+    <div class="row">
+      <!-- Item -->
+      <div class="col-lg-3 col-md-6">
+         <div class="card mb-4">
+            <div class="card-body text-center">
+               <i class="i-Add-User"></i>
+               <div class="py-4">
+                  <h2 class="text-primary mb-2">
+                     <button (click)="getAppartements()" class="btn btn-primary">Appartement</button></h2>
+                  <!--<p class="text-muted mt-2 mb-0">New Leads</p>-->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Item -->
+      <div class="col-lg-3 col-md-6">
+         <div  class="card   mb-4">
+            <div  class="card-body text-center">
+               <i  class="i-Add-User"></i>
+               <div  class="py-4">
+                  <h2  class="text-primary mb-2">
+                     <button (click)="getBurreaux()" class="btn btn-primary">Bureau</button>
+                  </h2>
+                  <!--<p  class="text-muted mt-2 mb-0">Total Views</p>-->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Item -->
+      <div class="col-lg-3 col-md-6">
+         <div  class="card   mb-4">
+            <div  class="card-body text-center">
+               <i  class="i-Add-User"></i>
+               <div  class="py-4">
+                  <h2  class="text-primary mb-2">
+                     <button (click)="getVillas()" class="btn btn-primary">Villa</button>
+                  </h2>
+                  <!--<p  class="text-muted mt-2 mb-0">Online</p>-->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Item -->
+      <div class="col-lg-3 col-md-6">
+         <div  class="card   mb-4">
+            <div  class="card-body text-center">
+               <i  class="i-Add-User"></i>
+               <div  class="py-4">
+                  <h2  class="text-primary mb-2">
+                     <button (click)="getTerrains()" class="btn btn-primary">Terrain</button>
+                  </h2>
+                  <!--<p  class="text-muted mt-2 mb-0">Total Users</p>-->
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="row">
+
+       <span *ngIf="update_appartement" class="col-lg-12 col-md-12 mb-4">
+            <form (ngSubmit) = "onSubmiteUpdateAppartement(appartement.id, appartement)">
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="titre">Titre {{appartement.id}}</label>
+                    <input type="text" class ="form-control" id = "titre"
+                           [(ngModel)] = "appartement.titre" name = "titre">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="surface">Surface: </label>
+                    <input type="text" class ="form-control" id = "surface"
+                           [(ngModel)] = "appartement.surface" name = "surface">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="price">Prix: </label>
+                    <input type="text" class ="form-control" id = "price"
+                           [(ngModel)] = "appartement.price" name = "price">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="description">Description: </label>
+                    <textarea rows="1" cols="12" class ="form-control" id = "description"
+                              [(ngModel)] = "appartement.description" name = "description"> </textarea>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="etage">Etage: </label>
+                    <input type="number" class ="form-control" id = "etage"
+                           [(ngModel)] = "appartement.etage" name = "etage">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="nombrePieces">Nombre de Pieces: </label>
+                    <input type="number" class ="form-control" id = "nombrePieces"
+                           [(ngModel)] = "appartement.nombrePieces" name = "nombrePieces">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label>adresse: </label>
+                    <app-places
+                            type="address"
+                            (onChange)="onSuggestionA($event)"
+                            (onClear)="onClear($event)"
+                    ></app-places>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="codePostal">Code Postal: </label>
+                    <input type="text" class ="form-control" id = "codePostal"
+                           [(ngModel)] = "appartement.codePostal" name = "codePostal">
+                  </div>
+                  <div class="form-group col-md-1">
+                    <label for="ville">Ville: </label>
+                    <input type="text" class ="form-control" id = "ville"
+                           [(ngModel)] = "appartement.ville" name = "ville">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="latitude">Latitude :</label>
+                    <input type="text" class ="form-control" id = "latitude"
+                           [(ngModel)] = "appartement.latitude" name = "latitude">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="longitude">Longitude: </label>
+                    <input type="text" class ="form-control" id = "longitude"
+                           [(ngModel)] = "appartement.longitude" name = "longitude">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit1/'+appartement.id" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit2/'+appartement.id" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 200px;">
+                            <img [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit3/'+appartement.id" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit4/'+appartement.id" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile1A($event)"><button (click)="uploadPhoto1App()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile2A($event)"><button (click)="uploadPhoto2App()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile3A($event)"><button (click)="uploadPhoto3App()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile4A($event)"><button (click)="uploadPhoto4App()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    </div>
+                    <div class="form-group col-md-6">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class = "btn btn-success" type ="submit">Update</button>
+                    </div>
+                    <div class="form-group col-md-5">
+                    </div>
+                </div>
+            </form>
+      </span>
+
+      <span *ngIf="create_appartement" class="col-lg-12 col-md-12 mb-4">
+            <form (ngSubmit) = "onSubmiteCreateAppartement()">
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="titre">Titre</label>
+                    <input type="text" class ="form-control" id = "titre"
+                           [(ngModel)] = "appartement.titre" name = "titre">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="surface">Surface: </label>
+                    <input type="text" class ="form-control" id = "surface"
+                           [(ngModel)] = "appartement.surface" name = "surface">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="price">Prix: </label>
+                    <input type="text" class ="form-control" id = "price"
+                           [(ngModel)] = "appartement.price" name = "price">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="description">Description: </label>
+                    <textarea rows="1" cols="12" class ="form-control" id = "description"
+                              [(ngModel)] = "appartement.description" name = "description"> </textarea>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="etage">Etage: </label>
+                    <input type="number" class ="form-control" id = "etage"
+                           [(ngModel)] = "appartement.etage" name = "etage">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="nombrePieces">Nombre de Pieces: </label>
+                    <input type="number" class ="form-control" id = "nombrePieces"
+                           [(ngModel)] = "appartement.nombrePieces" name = "nombrePieces">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label>adresse: </label>
+                    <app-places
+                            type="address"
+                            (onChange)="onSuggestionA($event)"
+                            (onClear)="onClear($event)"
+                    ></app-places>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="codePostal">Code Postal: </label>
+                    <input type="text" class ="form-control" id = "codePostal"
+                           [(ngModel)] = "appartement.codePostal" name = "codePostal">
+                  </div>
+                  <div class="form-group col-md-1">
+                    <label for="ville">Ville: </label>
+                    <input type="text" class ="form-control" id = "ville"
+                           [(ngModel)] = "appartement.ville" name = "ville">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="latitude">Latitude :</label>
+                    <input type="text" class ="form-control" id = "latitude"
+                           [(ngModel)] = "appartement.latitude" name = "latitude">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="longitude">Longitude: </label>
+                    <input type="text" class ="form-control" id = "longitude"
+                           [(ngModel)] = "appartement.longitude" name = "longitude">
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class = "btn btn-success" type ="submit">Submit</button>
+                    </div>
+                    <div class="form-group col-md-5">
+                    </div>
+                </div>
+            </form>
+      </span>
+
+      <span *ngIf="update_bureau" class="col-lg-12 col-md-12 mb-4">
+            <form (ngSubmit) = "onSubmiteUpdateBureau(bureau.id, bureau)">
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="titre">Titre</label>
+                    <input type="text" class ="form-control" id = "titre"
+                           [(ngModel)] = "bureau.titre" name = "titre">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="surface">Surface: </label>
+                    <input type="text" class ="form-control" id = "surface"
+                           [(ngModel)] = "bureau.surface" name = "surface">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="price">Prix: </label>
+                    <input type="text" class ="form-control" id = "price"
+                           [(ngModel)] = "bureau.price" name = "price">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="description">Description: </label>
+                    <textarea rows="1" class ="form-control" id = "description"
+                              [(ngModel)] = "bureau.description" name = "description"> </textarea>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="etage">Etage: </label>
+                    <input type="number" class ="form-control" id = "etage"
+                           [(ngModel)] = "bureau.etage" name = "etage">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="nbLocaux">Nombre de Locaux: </label>
+                    <input type="number" class ="form-control" id = "nbLocaux"
+                           [(ngModel)] = "bureau.nbLocaux" name = "nbLocaux">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label>adresse: </label>
+                    <app-places
+                            type="address"
+                            (onChange)="onSuggestionB($event)"
+                            (onClear)="onClear($event)"
+                    ></app-places>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="codePostal">Code Postal: </label>
+                    <input type="text" class ="form-control" id = "codePostal"
+                           [(ngModel)] = "bureau.codePostal" name = "codePostal">
+                  </div>
+                  <div class="form-group col-md-1">
+                    <label for="ville">Ville: </label>
+                    <input type="text" class ="form-control" id = "ville"
+                           [(ngModel)] = "bureau.ville" name = "ville">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="latitude">Latitude :</label>
+                    <input type="text" class ="form-control" id = "latitude"
+                           [(ngModel)] = "bureau.latitude" name = "latitude">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="longitude">Longitude: </label>
+                    <input type="text" class ="form-control" id = "longitude"
+                           [(ngModel)] = "bureau.longitude" name = "longitude">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit1/'+bureau.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit2/'+bureau.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit3/'+bureau.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit4/'+bureau.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile1B($event)"><button (click)="uploadPhoto1Bur()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile2B($event)"><button (click)="uploadPhoto2Bur()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile3B($event)"><button (click)="uploadPhoto3Bur()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile4B($event)"><button (click)="uploadPhoto4Bur()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class = "btn btn-success" type ="submit">UPDATE</button>
+                    </div>
+                    <div class="form-group col-md-5">
+                    </div>
+                </div>
+            </form>
+      </span>
+      <span *ngIf="create_bureau" class="col-lg-12 col-md-12 mb-4">
+            <form (ngSubmit) = "onSubmiteCreateBurreau()">
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="titre">Titre</label>
+                    <input type="text" class ="form-control" id = "titre"
+                           [(ngModel)] = "bureau.titre" name = "titre">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="surface">Surface: </label>
+                    <input type="text" class ="form-control" id = "surface"
+                           [(ngModel)] = "bureau.surface" name = "surface">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="price">Prix: </label>
+                    <input type="text" class ="form-control" id = "price"
+                           [(ngModel)] = "bureau.price" name = "price">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="description">Description: </label>
+                    <textarea rows="1" class ="form-control" id = "description"
+                              [(ngModel)] = "bureau.description" name = "description"> </textarea>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="etage">Etage: </label>
+                    <input type="number" class ="form-control" id = "etage"
+                           [(ngModel)] = "bureau.etage" name = "etage">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="nbLocaux">Nombre de Locaux: </label>
+                    <input type="number" class ="form-control" id = "nbLocaux"
+                           [(ngModel)] = "bureau.nbLocaux" name = "nbLocaux">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label>adresse: </label>
+                    <app-places
+                            type="address"
+                            (onChange)="onSuggestionB($event)"
+                            (onClear)="onClear($event)"
+                    ></app-places>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="codePostal">Code Postal: </label>
+                    <input type="text" class ="form-control" id = "codePostal"
+                           [(ngModel)] = "bureau.codePostal" name = "codePostal">
+                  </div>
+                  <div class="form-group col-md-1">
+                    <label for="ville">Ville: </label>
+                    <input type="text" class ="form-control" id = "ville"
+                           [(ngModel)] = "bureau.ville" name = "ville">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="latitude">Latitude :</label>
+                    <input type="text" class ="form-control" id = "latitude"
+                           [(ngModel)] = "bureau.latitude" name = "latitude">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="longitude">Longitude: </label>
+                    <input type="text" class ="form-control" id = "longitude"
+                           [(ngModel)] = "bureau.longitude" name = "longitude">
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class = "btn btn-success" type ="submit">Submit</button>
+                    </div>
+                    <div class="form-group col-md-5">
+                    </div>
+                </div>
+            </form>
+      </span>
+
+      <span *ngIf="create_villa" class="col-lg-12 col-md-12 mb-4">
+            <form (ngSubmit) = "onSubmiteCreateVilla()">
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="titre">Titre</label>
+                    <input type="text" class ="form-control" id = "titre"
+                           [(ngModel)] = "villa.titre" name = "titre">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="surface">Surface: </label>
+                    <input type="text" class ="form-control" id = "surface"
+                           [(ngModel)] = "villa.surface" name = "surface">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="price">Prix: </label>
+                    <input type="text" class ="form-control" id = "price"
+                           [(ngModel)] = "villa.price" name = "price">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="description">Description: </label>
+                    <textarea rows="1" class ="form-control" id = "description"
+                              [(ngModel)] = "villa.description" name = "description"> </textarea>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="etage">Etage: </label>
+                    <input type="number" class ="form-control" id = "etage"
+                           [(ngModel)] = "villa.etage" name = "etage">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="nbLocaux">Nombre de Pieces: </label>
+                    <input type="number" class ="form-control" id = "nbLocaux"
+                           [(ngModel)] = "villa.nombrePiece" name = "nbLocaux">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label>adresse: </label>
+                    <app-places
+                            type="address"
+                            (onChange)="onSuggestionV($event)"
+                            (onClear)="onClear($event)"
+                    ></app-places>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="codePostal">Code Postal: </label>
+                    <input type="text" class ="form-control" id = "codePostal"
+                           [(ngModel)] = "villa.codePostal" name = "codePostal">
+                  </div>
+                  <div class="form-group col-md-1">
+                    <label for="ville">Ville: </label>
+                    <input type="text" class ="form-control" id = "ville"
+                           [(ngModel)] = "villa.ville" name = "ville">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="latitude">Latitude :</label>
+                    <input type="text" class ="form-control" id = "latitude"
+                           [(ngModel)] = "villa.latitude" name = "latitude">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="longitude">Longitude: </label>
+                    <input type="text" class ="form-control" id = "longitude"
+                           [(ngModel)] = "villa.longitude" name = "longitude">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    </div>
+                    <div class="form-group col-md-6">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class = "btn btn-success" type ="submit">Submit</button>
+                    </div>
+                    <div class="form-group col-md-5">
+                    </div>
+                </div>
+            </form>
+      </span>
+      <span *ngIf="update_villa" class="col-lg-12 col-md-12 mb-4">
+            <form (ngSubmit) = "onSubmiteUpdateVilla(villa.id, villa)">
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="titre">Titre</label>
+                    <input type="text" class ="form-control" id = "titre"
+                           [(ngModel)] = "villa.titre" name = "titre">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="surface">Surface: </label>
+                    <input type="text" class ="form-control" id = "surface"
+                           [(ngModel)] = "villa.surface" name = "surface">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="price">Prix: </label>
+                    <input type="text" class ="form-control" id = "price"
+                           [(ngModel)] = "villa.price" name = "price">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="description">Description: </label>
+                    <textarea rows="1" class ="form-control" id = "description"
+                              [(ngModel)] = "villa.description" name = "description"> </textarea>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="etage">Etage: </label>
+                    <input type="number" class ="form-control" id = "etage"
+                           [(ngModel)] = "villa.etage" name = "etage">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="nbLocaux">Nombre de Pieces: </label>
+                    <input type="number" class ="form-control" id = "nbLocaux"
+                           [(ngModel)] = "villa.nombrePiece" name = "nbLocaux">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label>adresse: </label>
+                    <app-places
+                        type="address"
+                        (onChange)="onSuggestionV($event)"
+                        (onClear)="onClear($event)">
+                    </app-places>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="codePostal">Code Postal: </label>
+                    <input type="text" class ="form-control" id = "codePostal"
+                           [(ngModel)] = "villa.codePostal" name = "codePostal">
+                  </div>
+                  <div class="form-group col-md-1">
+                    <label for="ville">Ville: </label>
+                    <input type="text" class ="form-control" id = "ville"
+                           [(ngModel)] = "villa.ville" name = "ville">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="latitude">Latitude :</label>
+                    <input type="text" class ="form-control" id = "latitude"
+                           [(ngModel)] = "villa.latitude" name = "latitude">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="longitude">Longitude: </label>
+                    <input type="text" class ="form-control" id = "longitude"
+                           [(ngModel)] = "villa.longitude" name = "longitude">
+                  </div>
+                </div>
+                 <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.villaService.getGlobalResource().host+'/vil/photoProduit1/'+villa.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.villaService.getGlobalResource().host+'/vil/photoProduit2/'+villa.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.villaService.getGlobalResource().host+'/vil/photoProduit3/'+villa.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.villaService.getGlobalResource().host+'/vil/photoProduit4/'+villa.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile1V($event)"><button (click)="uploadPhoto1Vil()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile2V($event)"><button (click)="uploadPhoto2Vil()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile3V($event)"><button (click)="uploadPhoto3Vil()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile4V($event)"><button (click)="uploadPhoto4Vil()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    </div>
+                    <div class="form-group col-md-6">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class = "btn btn-success" type ="submit">Submit</button>
+                    </div>
+                    <div class="form-group col-md-5">
+                    </div>
+                </div>
+            </form>
+      </span>
+      <span *ngIf="create_terrain" class="col-lg-12 col-md-12 mb-4">
+            <form (ngSubmit) = "onSubmiteCreateTerrain()">
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="titre">Titre</label>
+                    <input type="text" class ="form-control" id = "titre"
+                           [(ngModel)] = "terrain.titre" name = "titre">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="surface">Surface: </label>
+                    <input type="text" class ="form-control" id = "surface"
+                           [(ngModel)] = "terrain.surface" name = "surface">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="price">Prix: </label>
+                    <input type="text" class ="form-control" id = "price"
+                           [(ngModel)] = "terrain.price" name = "price">
+                  </div>
+                </div>
+
+                <div class="form">
+                  <div class="form-group col-md-12">
+                    <label for="description">Description: </label>
+                      <textarea class="form-control form-control-alternative" placeholder="Description" id="description" rows="3" [(ngModel)] = "terrain.description" name = "description"></textarea>
+                    <!--<textarea rows="1" cols="12" class ="form-control"
+                              [(ngModel)] = "terrain.description" name = "description"> </textarea>-->
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label>adresse: </label>
+                    <app-places
+                            type="address"
+                            (onChange)="onSuggestionT($event)"
+                            (onClear)="onClear($event)"
+                    ></app-places>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="codePostal">Code Postal: </label>
+                    <input type="text" class ="form-control" id = "codePostal"
+                           [(ngModel)] = "terrain.codePostal" name = "codePostal">
+                  </div>
+                  <div class="form-group col-md-1">
+                    <label for="ville">Ville: </label>
+                    <input type="text" class ="form-control" id = "ville"
+                           [(ngModel)] = "terrain.ville" name = "ville">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="latitude">Latitude :</label>
+                    <input type="text" class ="form-control" id = "latitude"
+                           [(ngModel)] = "terrain.latitude" name = "latitude">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="longitude">Longitude: </label>
+                    <input type="text" class ="form-control" id = "longitude"
+                           [(ngModel)] = "terrain.longitude" name = "longitude">
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class = "btn btn-success" type ="submit">Submit</button>
+                    </div>
+                    <div class="form-group col-md-5">
+                    </div>
+                </div>
+            </form>
+      </span>
+
+      <span *ngIf="update_terrain" class="col-lg-12 col-md-12 mb-4">
+            <form (ngSubmit) = "onSubmiteUpdateTerrain(terrain.id, terrain)">
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="titre">Titre</label>
+                    <input type="text" class ="form-control" id = "titre"
+                           [(ngModel)] = "terrain.titre" name = "titre" required [min]="2" [maxLength]="100">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="surface">Surface: </label>
+                    <input type="text" class ="form-control" id = "surface"
+                           [(ngModel)] = "terrain.surface" name = "surface">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="price">Prix: </label>
+                    <input type="text" class ="form-control" id = "price"
+                           [(ngModel)] = "terrain.price" name = "price">
+                  </div>
+                </div>
+
+                <div class="form">
+                  <div class="form-group col-md-12">
+                    <label for="description">Description: </label>
+                      <textarea class="form-control form-control-alternative" placeholder="Description" id="description" rows="3" [(ngModel)] = "terrain.description" name = "description"></textarea>
+                      <!--<textarea rows="1" cols="12" class ="form-control"
+                                [(ngModel)] = "terrain.description" name = "description"> </textarea>-->
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label>adresse: </label>
+                    <app-places
+                            type="address"
+                            (onChange)="onSuggestionT($event)"
+                            (onClear)="onClear($event)"
+                    ></app-places>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="codePostal">Code Postal: </label>
+                    <input type="text" class ="form-control" id = "codePostal"
+                           [(ngModel)] = "terrain.codePostal" name = "codePostal">
+                  </div>
+                  <div class="form-group col-md-1">
+                    <label for="ville">Ville: </label>
+                    <input type="text" class ="form-control" id = "ville"
+                           [(ngModel)] = "terrain.ville" name = "ville">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="latitude">Latitude :</label>
+                    <input type="text" class ="form-control" id = "latitude"
+                           [(ngModel)] = "terrain.latitude" name = "latitude">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="longitude">Longitude: </label>
+                    <input type="text" class ="form-control" id = "longitude"
+                           [(ngModel)] = "terrain.longitude" name = "longitude">
+                  </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-3">
+                            <div class="card" style="width: 300px;">
+                                <img [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit1/'+terrain.id" class="card-img-top img-thumbnail" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card" style="width: 300px;">
+                                <img [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit2/'+terrain.id" class="card-img-top img-thumbnail" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card" style="width: 300px;">
+                                <img [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit3/'+terrain.id" class="card-img-top img-thumbnail" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card" style="width: 300px;">
+                                <img [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit4/'+terrain.id" class="card-img-top img-thumbnail" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile1T($event)"><button (click)="uploadPhoto1Ter()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile2T($event)"><button (click)="uploadPhoto2Ter()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile3T($event)"><button (click)="uploadPhoto3Ter()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="file" class="form-controle" (change)="onSelectedFile4T($event)"><button (click)="uploadPhoto4Ter()" class = "btn btn-primary" type ="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                </div> <p></p>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    </div>
+                    <div class="form-group col-md-6">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class = "btn btn-success" type ="submit">Submit</button>
+                    </div>
+                    <div class="form-group col-md-5">
+                    </div>
+                </div>
+            </form>
+      </span>
+
+      <div class="col-lg-12 col-md-12 mb-4">
+         <div class="card">
+            <div class="db-tile" *ngIf="appartements">
+               <button class="btn btn-warning" (click)="OnCreateAppartement()"> Creer Appartement </button>
+            </div>
+            <div class="db-tile" *ngIf="burreaux">
+               <button class="btn btn-warning" (click)="OnCreateBureau()"> Creer Bureau </button>
+            </div>
+            <div class="db-tile" *ngIf="villas">
+               <button class="btn btn-warning" (click)="OnCreateVillas()"> Creer Villa </button>
+            </div>
+            <div class="db-tile" *ngIf="terrains">
+               <button class="btn btn-warning" (click)="OnCreateTerrain()"> Creer Terrain </button>
+            </div>
+            <div class="dashboard-list-box table-responsive invoices with-icons">
+               <table class="table table-hover">
+                  <thead>
+                     <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Titre</th>
+                        <th>Surface (m²)</th>
+                        <th>Price</th>
+                        <th>Ville</th>
+                        <th>Avaible</th>
+                     </tr>
+                  </thead>
+                  <tbody *ngIf="appartements">
+                        <tr *ngFor="let bien of appartements._embedded.appartements">
+                           <td>{{bien.id}}</td>
+                           <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit1/'+bien.id" width="50" height="50" alt=""></td>
+                           <td>{{bien.titre}}</td>
+                           <td>{{bien.surface}}</td>
+                           <td>{{bien.price}}</td>
+                           <td>{{bien.ville}}</td>
+                           <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
+                           <td>
+                              <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteA(bien.id)">Delete</button>
+                              <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateA(bien.id)">Update</button>
+                              <button class="btn btn-sm btn-info" type="button" (click)="OnDetailA(bien.id)">View</button>
+                           </td>
+                        </tr>
+                  </tbody>
+                  <tbody *ngIf="burreaux">
+                  <tr *ngFor="let bien of burreaux._embedded.bureaus">
+                     <td>{{bien.id}}</td>
+                     <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit1/'+bien.id" width="50" height="50" alt=""></td>
+                     <td>{{bien.titre}}</td>
+                     <td>{{bien.surface}}</td>
+                     <td>{{bien.price}}</td>
+                     <td>{{bien.ville}}</td>
+                     <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
+                     <td>
+                        <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteB(bien.id)">Delete</button>
+                        <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateB(bien.id)">Update</button>
+                        <button class="btn btn-sm btn-info" type="button" (click)="OnDetailB(bien.id)">View</button>
+                     </td>
+                  </tr>
+                  </tbody>
+                  <tbody *ngIf="villas">
+                  <tr *ngFor="let bien of villas._embedded.villas">
+                     <td>{{bien.id}}</td>
+                     <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.bureauService.getGlobalResource().host+'/vil/photoProduit1/'+bien.id" width="50" height="50" alt=""></td>
+                     <td>{{bien.titre}}</td>
+                     <td>{{bien.surface}}</td>
+                     <td>{{bien.price}}</td>
+                     <td>{{bien.ville}}</td>
+                     <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
+                     <td>
+                        <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteV(bien.id)">Delete</button>
+                        <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateV(bien.id)">Update</button>
+                        <button class="btn btn-sm btn-info" type="button" (click)="OnDetailV(bien.id)">View</button>
+                     </td>
+                  </tr>
+                  </tbody>
+                  <tbody *ngIf="terrains">
+                  <tr *ngFor="let bien of terrains._embedded.terrains">
+                     <td>{{bien.id}}</td>
+                     <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit1/'+bien.id" width="60" height="80" alt=""></td>
+                     <td>{{bien.titre}}</td>
+                     <td>{{bien.surface}}</td>
+                     <td>{{bien.price}}</td>
+                     <td>{{bien.ville}}</td>
+                     <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
+                     <td>
+                        <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteT(bien.id)">Delete</button>
+                        <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateT(bien.id)">Update</button>
+                        <button class="btn btn-sm btn-info" type="button" (click)="OnDetailT(bien.id)">View</button>
+                     </td>
+                  </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+
+        <span *ngIf="appartementOne">
+            <div class="card">
+                  <div class="card-header text-center">
+                    {{appartementOne.titre }}, {{ appartementOne.etage}} ième etage, {{ appartementOne.nombrePieces}} pieces
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">{{appartementOne.adresse}}, {{appartementOne.ville}}, {{appartementOne.codePostal}} </h5>
+                    <p class="card-text">{{appartementOne.description}}</p>
+                        <p class="card-text">
+                            <agm-map [latitude]="appartementOne.latitude" [longitude]="appartementOne.longitude">
+                                <agm-marker [latitude]="appartementOne.latitude" [longitude]="appartementOne.longitude"></agm-marker>
+                            </agm-map>
+                        </p>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit1/'+appartementOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit2/'+appartementOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit3/'+appartementOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit4/'+appartementOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+       </span>
+
+
+       <span *ngIf="bureauOne">
+            <div class="card">
+                  <div class="card-header text-center">
+                    {{bureauOne.titre}}, {{ bureauOne.etage}} ième etage, {{ bureauOne.nbLocaux}} Locaux
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">{{bureauOne.adresse}}, {{bureauOne.ville}}, {{bureauOne.codePostal}} </h5>
+                    <p class="card-text">{{bureauOne.description}}</p>
+                        <p class="card-text">
+                            <agm-map [latitude]="bureauOne.latitude" [longitude]="bureauOne.longitude">
+                                <agm-marker [latitude]="bureauOne.latitude" [longitude]="bureauOne.longitude"></agm-marker>
+                            </agm-map>
+                        </p>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit1/'+bureauOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit2/'+bureauOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit3/'+bureauOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit4/'+bureauOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </span>
+
+       <span *ngIf="villaOne">
+            <div class="card">
+                  <div class="card-header text-center">
+                    {{villaOne.titre }}, {{ villaOne.etage}} ième etage, {{ villaOne.nombrePiece}} pieces
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">{{villaOne.adresse}}, {{villaOne.ville}}, {{villaOne.codePostal}} </h5>
+                    <p class="card-text">{{villaOne.description}}</p>
+                        <p class="card-text">
+                            <agm-map [latitude]="villaOne.latitude" [longitude]="villaOne.longitude">
+                                <agm-marker [latitude]="villaOne.latitude" [longitude]="villaOne.longitude"></agm-marker>
+                            </agm-map>
+                        </p>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.villaService.getGlobalResource().host+'/vil/photoProduit1/'+villaOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.villaService.getGlobalResource().host+'/vil/photoProduit2/'+villaOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.villaService.getGlobalResource().host+'/vil/photoProduit3/'+villaOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.villaService.getGlobalResource().host+'/vil/photoProduit4/'+villaOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+       </span>
+
+       <span *ngIf="terrainOne">
+            <div class="card">
+                  <div class="card-header text-center text-uppercase">
+                    {{terrainOne.titre }}, il est vendu a {{terrainOne.price}} €, surperficie : {{terrainOne.surface}}
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">{{terrainOne.adresse}}, {{terrainOne.ville}}, {{terrainOne.codePostal}} </h5>
+                    <p class="card-text">{{terrainOne.description}}</p>
+                        <p class="card-text">
+                            <agm-map [latitude]="terrainOne.latitude" [longitude]="terrainOne.longitude">
+                                <agm-marker [latitude]="terrainOne.latitude" [longitude]="terrainOne.longitude"></agm-marker>
+                            </agm-map>
+                        </p>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit1/'+terrainOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit2/'+terrainOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit3/'+terrainOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 300px;">
+                            <img [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit4/'+terrainOne.id" class="card-img-top img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </span>
+
+
+      </div>
+   </div>
+</div>

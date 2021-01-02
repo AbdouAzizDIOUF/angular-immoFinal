@@ -15,7 +15,7 @@ export class BannerComponent implements OnInit {
    @Input('desc') Desc: any = 'Description';
 
    /** Background for baner **/
-   @Input('bgImageUrl') BgImageUrl: any = 'assets/images/main-search-background-01.jpg';
+   @Input('bgImageUrl') BgImageUrl: any = 'assets/images/bg-cs.jpg';
 
    constructor(){}
 
