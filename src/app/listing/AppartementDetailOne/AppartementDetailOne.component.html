@@ -1,0 +1,112 @@
+
+<div class="main-wrapper">
+<gallery-slider [data]="appartementGaleryImage"></gallery-slider>
+<!-- Content -->
+<div class="container">
+   <div class="content">
+      <div class="row sticky-wrapper">
+         <div class="col-lg-8 col-md-8">
+            <div class="" *ngIf="appartement">
+               <div class="detail-tile mb-4">
+                  <h3>
+                     {{appartement.titre}} <span class="badge badge-pill badge-success text-uppercase" *ngIf="appartement.available==true">Disponible</span>
+                  </h3>
+                  <p class="text-muted">{{appartement.adresse}}</p>
+                  <span class="badge badge-pill badge-info text-uppercase mr-2">{{appartement.surface }} m²</span>
+                  <span class="badge badge-pill badge-info text-uppercase mr-2">{{appartement.price}} EURO</span>
+                  <span class="badge badge-pill badge-info text-uppercase">{{appartement.nombrePieces}} Pieces</span>
+               </div>
+               <div class="nav-wrapper mb-4">
+                  <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+                     <li class="nav-item">
+                        <a class="nav-link mb-sm-3 mb-md-0 active show" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="fa fa-info-circle mr-2"></i>About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="fa fa-map-marker mr-2"></i>Location</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="fa fa-money mr-2"></i>Demande de Contrat</a>
+                     </li>
+                     <!--<li class="nav-item">
+                        <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-4-tab" data-toggle="tab" href="#tabs-icons-text-4" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="fa fa-money mr-2"></i>Reviews</a>
+                     </li>-->
+                  </ul>
+               </div>
+               <div class="card shadow">
+                  <div class="card-body">
+                     <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade active show" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                           <p class="description">{{appartement.description}}</p>
+                           <h4 class="mb-4">
+                              Contact Info
+                           </h4>
+                           <div class="row mb-4">
+                              <div class="col-lg-4">
+                                 <div class="detail-list mb-2">
+                                    <div class="detail-list-label mb-1"><i aria-hidden="true" class="fa fa-phone mr-2"></i><small class="text-uppercase font-weight-bold">Commercial</small></div>
+                                    <p class="m-0 text-small text-muted">+33 7 45 84 56</p>
+                                 </div>
+                              </div>
+                              <div class="col-lg-4">
+                                 <div class="detail-list mb-2">
+                                    <div class="detail-list-label mb-1"><i aria-hidden="true" class="fa fa-phone mr-2"></i><small class="text-uppercase font-weight-bold">Information</small></div>
+                                    <p class="m-0 text-small text-muted">+33 6 53 89 57</p>
+                                 </div>
+                              </div>
+                              <div class="col-lg-4">
+                                 <div class="detail-list mb-2">
+                                    <div class="detail-list-label mb-1"><i aria-hidden="true" class="fa fa-phone mr-2"></i><small class="text-uppercase font-weight-bold">Support.</small></div>
+                                    <p class="m-0 text-small text-muted">+33 5 90 74 45</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--<h4 class="mb-4">
+                              Features
+                           </h4>
+                           <span class="badge badge-pill badge-primary text-uppercase mr-2 mb-2">Swimming pool</span>
+                           <span class="badge badge-pill badge-primary text-uppercase mr-2 mb-2"> Free WiFi Internet Access Included</span>
+                           <span class="badge badge-pill badge-primary text-uppercase mr-2 mb-2"> Free Parking</span>
+                           <span class="badge badge-pill badge-primary text-uppercase mr-2 mb-2">Swimmingpool Outdoor</span>
+                           <span class="badge badge-pill badge-primary text-uppercase mr-2 mb-2">Family Rooms</span>
+                           <span class="badge badge-pill badge-primary text-uppercase mr-2 mb-2">Non Smoking Rooms</span>-->
+                        </div>
+                        <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                           <div>
+                              <agm-map [latitude]="lat" [longitude]="lng" style="height: 300px">
+                                  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                              </agm-map>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+                           <div class="pricing-list-container" *ngIf="clickDemandeContrat1==false">
+                                 <form (submit)="onCreateContrat()" class="col-lg-12 col-md-12 mb-4">
+                                    <span *ngIf="appartement.status=='A vendre'">
+                                       <input type="submit" class="form-control btn btn-primary" value="Envoyer votre demande D'achat">
+                                    </span>
+                                    <span *ngIf="appartement.status=='A louer'">
+                                       <input type="submit" class="form-control btn btn-primary" value="Envoyer votre demande de location">
+                                    </span>
+                                 </form>
+                           </div>
+                           <div  *ngIf="clickDemandeContrat1==true">
+                              <div class="alert alert-primary" role="alert">
+                                 <div class="alert alert-warning" role="alert">
+                                    <p>Vous venez d'envouyer une demande de contrat, merci pour votre confiance a l'agence immo, Veiller consultez votre mail !!</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4">
+            <sidebar-layout-one></sidebar-layout-one>
+            <!--<sidebar-layout-two></sidebar-layout-two>-->
+         </div>
+      </div>
+   </div>
+</div>
+
+</div>

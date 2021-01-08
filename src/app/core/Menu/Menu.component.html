@@ -14,5 +14,9 @@
                </ul>
             </li>
          </ul>
+      </li>
+      <li *ngIf="keycloakSecurityService.isAuthenticated()">
+         <a class="current clickable"  [routerLink]="['/monespace']">Mon Espace</a>
+      </li>
    </ul>
 </nav>

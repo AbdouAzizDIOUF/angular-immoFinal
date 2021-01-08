@@ -1,6 +1,7 @@
 import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { MenuItems } from './menu-items';
+import { KeycloakSecurityService } from 'src/app/services/keycloak-security.service';
 declare var $ : any;
 
 @Component({
@@ -13,7 +14,7 @@ export class MenuComponent implements OnInit {
 
    selectedMenu : any = null;
    selectedSubMenu : any = null;
-   constructor(public menuItems: MenuItems, private router: Router) {
+   constructor(public menuItems: MenuItems, private router: Router, public keycloakSecurityService: KeycloakSecurityService) {
    	this.router.events.subscribe((ev) => {
 	      if (ev instanceof NavigationEnd) {
 	      	$('#navbar_global').removeClass('show');
@@ -39,5 +40,9 @@ export class MenuComponent implements OnInit {
       else{
          this.selectedSubMenu = value;
       }
+   }
+
+   monospace() {
+         return this.router.navigateByUrl["/monespace"];
    }
 }

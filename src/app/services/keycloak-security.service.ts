@@ -18,29 +18,35 @@ export class KeycloakSecurityService {
     }
   }
 
-  onLogin() {
+  public onLogin() {
     this.kc.login();
   }
 
-  onLogout() {
+  public onLogout() {
     this.kc.logout();
   }
 
-  onChangePassword() {
+  public onChangePassword() {
     this.kc.getKeycloakInstance().accountManagement();
   }
 
-  isAuthenticated(): boolean{
+  public isAuthenticated(): boolean{
     return this.kc.getKeycloakInstance().authenticated;
   }
 
-  isAppManager(): boolean {
+  public isAppManager(): boolean {
     return this.kc.getKeycloakInstance.hasRealmRole("app-manager");
   }
 
-  userDetail(value:string){
+  public userDetail(value:string){
     return this.kc.getKeycloakInstance().tokenParsed[value];
   }
 
+  public getUserID(){
+    return this.kc.getKeycloakInstance().subject;
+  }
 
+  public getKeycloakInstance(){
+    return this.kc.getKeycloakInstance();
+  }
 }

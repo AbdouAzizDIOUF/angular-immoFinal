@@ -14,7 +14,9 @@ import {Contrat} from './model/contrat';
 })
 export class GlobalService {
 
-  public host:string = "http://immo-agence.fr:8888";
+  //public host:string = "http://immo-agence.fr:8888";
+
+  public host:string = "http://localhost:8888";
 
   constructor(private http: HttpClient) { }
 
@@ -27,14 +29,18 @@ export class GlobalService {
     return this.http.get(this.host+url);
   }
 
+  public getRessourceByBien(url){
+    return this.http.get(url);
+  }
+
   public deleteRessource(url){
       console.log(url);
       return this.http.delete(this.host+url);
   }
 
-  public getBien(url):Observable<Bien>
+  public getBien(url):Observable<Object>
   {
-    return this.http.get<Bien>(url);
+    return this.http.get<Object>(url);
   }
 
   public getAppartement(url):Observable<Appartement>

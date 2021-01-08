@@ -85,18 +85,18 @@ export class AdminDashboardlComponent implements OnInit{
     private currentTimeT: number;
 
 
-   constructor(
-       private router: Router,
-       private bienservice: BienService,
-       public appartementService: AppartementService,
-       public bureauService: BureauService,
-       public villaService: VillaService,
-       public terrainService: TerrainService
-       ){}
+    constructor(
+        private router: Router,
+        private bienservice: BienService,
+        public appartementService: AppartementService,
+        public bureauService: BureauService,
+        public villaService: VillaService,
+        public terrainService: TerrainService
+    ){}
 
-   ngOnInit(){
+    ngOnInit(){
         this.getAppartements();
-   }
+    }
 
 
     onSuggestionA($event) {
@@ -153,7 +153,7 @@ export class AdminDashboardlComponent implements OnInit{
                 this.getInitialModel();
                 this.resetBienViewMap();
                 this.resetBienUpdVar();
-
+                //console.log(data)
                 this.appartement = new Appartement();
                 this.create_appartement = false;
 
@@ -169,68 +169,68 @@ export class AdminDashboardlComponent implements OnInit{
     }
 
     public getBurreaux(){
-       this.bureauService.getBurreaus()
-           .subscribe(data =>{
-               this.getInitialModel();
-               this.resetBienViewMap();
-               this.resetBienUpdVar();
+        this.bureauService.getBurreaus()
+            .subscribe(data =>{
+                this.getInitialModel();
+                this.resetBienViewMap();
+                this.resetBienUpdVar();
 
-               this.bureau = new Bureau();
-               this.burreaux = data;
-               this.create_bureau = false;
-               this.biens = undefined;
-               this.appartements = undefined;
-               this.villas = undefined;
-               this.terrains = undefined;
-           }, error => {
-               console.log(error);
-           });
+                this.bureau = new Bureau();
+                this.burreaux = data;
+                this.create_bureau = false;
+                this.biens = undefined;
+                this.appartements = undefined;
+                this.villas = undefined;
+                this.terrains = undefined;
+            }, error => {
+                console.log(error);
+            });
     }
 
     public getTerrains(){
-       this.terrainService.getTerrain()
-           .subscribe(data => {
-               this.getInitialModel();
-               this.resetBienViewMap();
-               this.resetBienUpdVar();
+        this.terrainService.getTerrain()
+            .subscribe(data => {
+                this.getInitialModel();
+                this.resetBienViewMap();
+                this.resetBienUpdVar();
 
-               this.terrain = new Terrain();
-               this.terrains = data;
-               this.create_terrain = false;
-               this.burreaux = undefined;
-               this.biens = undefined;
-               this.appartements = undefined;
-               this.villas = undefined;
-           }, error =>{
-               console.log(error.message);
-           })
+                this.terrain = new Terrain();
+                this.terrains = data;
+                this.create_terrain = false;
+                this.burreaux = undefined;
+                this.biens = undefined;
+                this.appartements = undefined;
+                this.villas = undefined;
+            }, error =>{
+                console.log(error.message);
+            })
     }
 
     public getVillas(){
-       this.villaService.getVillas()
-           .subscribe(data =>{
-               this.getInitialModel();
-               this.resetBienViewMap();
-               this.resetBienUpdVar();
+        this.villaService.getVillas()
+            .subscribe(data =>{
+                this.getInitialModel();
+                this.resetBienViewMap();
+                this.resetBienUpdVar();
 
-               this.villa = new Villa();
-               this.villas = data;
-               this.create_villa = false;
-               this.burreaux = undefined;
-               this.biens = undefined;
-               this.appartements = undefined;
-               this.terrains = undefined;
-           },error =>{
-               console.log(error.message);
-           })
+                this.villa = new Villa();
+                this.villas = data;
+                this.create_villa = false;
+                this.burreaux = undefined;
+                this.biens = undefined;
+                this.appartements = undefined;
+                this.terrains = undefined;
+            },error =>{
+                console.log(error.message);
+            })
     }
 
 
     OnCreateAppartement() {
-       this.create_appartement = true;
-       this.create_bureau = false;
-       this.create_villa = false;
-       this.create_terrain = false;
+        this.create_appartement = true;
+        this.create_bureau = false;
+        this.create_villa = false;
+        this.create_terrain = false;
     }
 
     OnCreateBureau() {
@@ -297,8 +297,8 @@ export class AdminDashboardlComponent implements OnInit{
             })
     }
 
-     OnUpdateA(id: any) {
-       this.appartementService.getAppartementById(id).subscribe(data => {
+    OnUpdateA(id: any) {
+        this.appartementService.getAppartementById(id).subscribe(data => {
             this.getInitialModel();
 
             // @ts-ignore
@@ -308,24 +308,24 @@ export class AdminDashboardlComponent implements OnInit{
             this.update_bureau = undefined;
             this.update_terrain = undefined;
             this.update_villa = undefined;
-           }, error =>{
-               console.log(error);
-           })
+        }, error =>{
+            console.log(error);
+        })
     }
     OnUpdateB(id: any) {
-       this.bureauService.getBureauById(id).subscribe(data =>{
-           this.getInitialModel();
-           // @ts-ignore
-           this.bureau = data;
-           this.update_bureau = true;
+        this.bureauService.getBureauById(id).subscribe(data =>{
+            this.getInitialModel();
+            // @ts-ignore
+            this.bureau = data;
+            this.update_bureau = true;
 
-        this.update_appartement = undefined;
-        this.update_terrain = undefined;
-        this.update_villa = undefined;
+            this.update_appartement = undefined;
+            this.update_terrain = undefined;
+            this.update_villa = undefined;
 
-       }, error => {
-           console.log(error);
-       })
+        }, error => {
+            console.log(error);
+        })
     }
     OnUpdateV(id: any) {
         this.villaService.getVillaById(id).subscribe(data =>{
@@ -361,17 +361,17 @@ export class AdminDashboardlComponent implements OnInit{
     }
 
     OnDetailA(id: any) {
-       this.appartementService.getAppartementById(id)
-           .subscribe(data => {
-               this.appartements = undefined;
-               this.getInitialModel();
-               this.resetBienViewMap();
-               this.resetBienUpdVar();
+        this.appartementService.getAppartementById(id)
+            .subscribe(data => {
+                this.appartements = undefined;
+                this.getInitialModel();
+                this.resetBienViewMap();
+                this.resetBienUpdVar();
 
-               this.appartementOne = data;
-           }, error => {
-               console.log(error);
-           })
+                this.appartementOne = data;
+            }, error => {
+                console.log(error);
+            })
     }
 
     OnDetailB(id: any) {
@@ -824,10 +824,10 @@ export class AdminDashboardlComponent implements OnInit{
     }
 
     private resetAllBiensVar(){
-       this.appartements = undefined;
-       this.burreaux = undefined;
-       this.villas = undefined;
-       this.terrains = undefined;
+        this.appartements = undefined;
+        this.burreaux = undefined;
+        this.villas = undefined;
+        this.terrains = undefined;
     }
 
     onSubmiteUpdateAppartement(id: number, appartement: Appartement) {
@@ -865,5 +865,7 @@ export class AdminDashboardlComponent implements OnInit{
             console.log(error);
         })
     }
+
+
 
 }

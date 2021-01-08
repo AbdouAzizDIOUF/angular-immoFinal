@@ -2,12 +2,374 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95310b31-8c15-436d-becc-4c2ad7f27bb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/angular.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/angular.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/10.409b964cf91d3dc5f428.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/2.33e6243e304fe534fa8a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/7.e3bda05dff6872194e15.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/8.e01b5059bc540c484f32.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/9.8083345ebe28b6187c85.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/IcoMoon-Free.a60c1d623c6ef3c3ba8a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/ajax-loader.fb6f3c230cb846e25247.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/css/bootstrap-datepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/css/icon-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/css/icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/IcoMoon-Free.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/fontello.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/fontello.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/fontello.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/fontello.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/iconsmind.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/iconsmind.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/iconsmind.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/iconsmind.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/simple-line-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/simple-line-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/simple-line-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/fonts/simple-line-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/about-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/beer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/bg-cs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/bg-login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/blog-img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/blog-img-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/blog-img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/bw-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/bw-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/bw-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/cat-img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/cat-img-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/cat-img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/cat-img-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/cat-img-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/cat-img-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/dp-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/dp-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/dp-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/dp-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/dp-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/hotel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/interface.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/main-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/main-search-video-poster.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/marker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/most-img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/most-img-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/most-img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/most-img-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/most-img-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/most-img-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/plus-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/post-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/post-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/post-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/reserve/bw-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/reserve/logo-dark 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/reserve/logo-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/reserve/logo-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/reserve/logo/logo-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/reserve/logo/logo-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/reserve/main-banner 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/reserve/main-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/reserve/title-bar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/rest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/slider-parallax.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/thumb-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/thumb-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/thumb-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/thumb-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/images/title-bar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/bootstrap-datepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/chosen.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/counterup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/daterangepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/dropzone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/jquery-2.2.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/jquery.countdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/magnific-popup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/maps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/markerclusterer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/nouislider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/nouislider.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scripts/switcher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_button-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_jumbotron.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_media.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_print.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_transitions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_background-variant.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_caret.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_gradients.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_grid-framework.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_image.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_nav-divider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_reset-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_resize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_size.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_table-row.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_text-emphasis.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_text-hide.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_text-truncate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/mixins/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_align.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_background.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_borders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_display.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_embed.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_flex.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_screenreaders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_shadows.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_sizing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/bootstrap/utilities/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/accordion.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/admin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/badges.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/category-small.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/custom-checkbox.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/custom-marker.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/custom-zoom.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/flip-banner.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/image-edge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/img-hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/info-banner.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/info-box.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/like-icon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/listing-item.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/maps.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/notification.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/parallax.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/post-navigation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/pricing-tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/rating.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/session.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/social-icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/tabs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/testimonial.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/title-bar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/component/tooltips.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_accordion.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_alerts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_avatars.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_block.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_rtl.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_section.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_separator.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/mixins/_background-variant.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/mixins/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/mixins/_icon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/mixins/_modals.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/mixins/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/utilities/_backgrounds.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/utilities/_floating.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/utilities/_helper.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/utilities/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/utilities/_shadows.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/utilities/_sizing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/utilities/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/utilities/_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/utilities/_transform.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/vendor/_bootstrap-datepicker.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/vendor/_headroom.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/custom/vendor/_nouislider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/datepicker.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/inner-container.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/main-search.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/map-banner.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/navigation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/pages/blog.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/pages/coming-soon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/pages/other-pages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/pages/pages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/prepros.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/pricing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/third-party/dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/third-party/magnific.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/third-party/slick-slider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/third-party/third-party.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/scss/variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/assets/silent-check-sso.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/common.cda3fcf4a732570d5377.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/fontawesome-webfont.20fd1704ea223900efa9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/fontawesome-webfont.8b43027f47b20503057d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/fontawesome-webfont.f691f37e57f04c152e23.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/fontello.467e679ee99c0c712bf2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/fontello.70b43d8654ee571814c6.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/fontello.b8ce9dc9f4dcfdede562.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/fontello.e5de50450b1424b1b1d2.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/main-banner.d955e5cef85a1abe413b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/main.16bcfe3b1aad8d8ef43b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/polyfills-es5.d060f7da6717d526c2b9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/polyfills.e795ee9ddc3b5fff6f14.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/runtime.26e0ee368bc4ff01f59f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/scripts.76885279d4962943ef31.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/slick.2630a3e3eab21c607e21.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/slick.295183786cd8a1389865.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/slick.a4e97f5a2a64f0ab1323.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/slick.c94f7671dcc99dce43e2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/slider-parallax.5ed9bdfd02e959151650.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/styles.ec57931c2a3f986d3c33.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/angularListing/title-bar.18c13cfa94edb4a125af.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/__ngcc_entry_points__.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/__ngcc_entry_points__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/adminPages/Bookings/Bookings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/adminPages/Bookings/Bookings.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/adminPages/Dashboard/AdminDashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/adminPages/Dashboard/AdminDashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/adminPages/Dashboard/AdminDashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/adminPages/Dashboard/AdminDashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/adminPages/Messages/Messages.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/adminPages/Messages/Messages.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/adminPages/Messages/Messages.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/adminPages/Messages/Messages.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/adminPages/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/adminPages/admin.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/adminPages/admin.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/adminPages/admin.routing.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/AdminSidebar/AdminSidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/AdminSidebar/AdminSidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/Header/Header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/Header/Header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/Header/Header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/Header/Header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/Menu/Menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/Menu/Menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/Menu/Menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/Menu/Menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/global.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/global.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globalFrontendComponents/GallerySlider/GallerySlider.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globalFrontendComponents/GallerySlider/GallerySlider.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/listing/GridFullWidth/GridFullWidth.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/listing/GridFullWidth/GridFullWidth.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/listing/listing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/listing/listing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/listing/listing.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/listing/listing.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/bien.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/bien.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/Booking/Booking.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/Booking/Booking.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/Contact/Contact.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/Contact/Contact.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/Contact/Contact.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/Contact/Contact.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/appartement.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/appartement.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/bureau.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/bureau.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/client.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/client.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/contrat.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/contrat.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/keycloak-security.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/keycloak-security.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/particulier.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/particulier.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/terrain.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/terrain.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/villa.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/villa.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,21 +395,25 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projets\projet web avance\angular\angularTest\src\app\layouts" />
-      <recent name="E:\Projets\projet web avance\angular\angularTest\src\app\core" />
-      <recent name="E:\Projets\projet web avance\angular\angularTest\src\app" />
-      <recent name="E:\Projets\projet web avance\angular\src\assets\images" />
+      <recent name="E:\Projets\projet web avance\angular\angularTest\src\assets\images" />
+      <recent name="E:\Projets\projet web avance\angular\angularTest\src\app\pages" />
+      <recent name="E:\Projets\projet web avance\angular\angularTest\src\assets" />
+      <recent name="E:\Projets\projet web avance\angular\angularTest\src\app\listing" />
+      <recent name="E:\Projets\projet web avance\angular\angularTest\src\app\listing\AppartementFullWidth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projets\projet web avance\angular\angularTest\src\assets\scripts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -121,7 +487,16 @@
       <workItem from="1609531069462" duration="8630000" />
       <workItem from="1609542552983" duration="6585000" />
       <workItem from="1609577118939" duration="5264000" />
-      <workItem from="1609598022337" duration="13736000" />
+      <workItem from="1609598022337" duration="19198000" />
+      <workItem from="1609636165913" duration="55369000" />
+      <workItem from="1609814623009" duration="6648000" />
+      <workItem from="1609847107059" duration="2150000" />
+      <workItem from="1609850589396" duration="1851000" />
+      <workItem from="1609852875919" duration="3594000" />
+      <workItem from="1609853387993" duration="50929000" />
+      <workItem from="1609981670471" duration="10068000" />
+      <workItem from="1609997210795" duration="6893000" />
+      <workItem from="1610021593939" duration="22127000" />
     </task>
     <servers />
   </component>
@@ -141,14 +516,15 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="593" y="214" key="#Web_Browsers/0.0.1600.860@0.0.1600.860" timestamp="1605964960020" />
-    <state x="608" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1609510496770">
-      <screen x="0" y="27" width="1600" height="873" />
-    </state>
-    <state x="608" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" timestamp="1609510496770" />
-    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609083981430">
+    <state x="608" y="153" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1610049351653">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1609083981430" />
+    <state x="608" y="153" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1610049351653" />
+    <state x="608" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" timestamp="1609510496770" />
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609850447190">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1609850447190" />
     <state x="468" y="202" key="EditFileWatcherDialog" timestamp="1605983017119">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -157,35 +533,39 @@
       <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state x="583" y="221" width="424" height="491" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1609294072265" />
-    <state width="1554" height="197" key="GridCell.Tab.0.bottom" timestamp="1609540272553">
-      <screen x="0" y="27" width="1600" height="873" />
+    <state width="1557" height="257" key="GridCell.Tab.0.bottom" timestamp="1610033904219">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="111" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609283857337" />
+    <state width="1557" height="257" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1610033904219" />
     <state width="1554" height="197" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1609540272553" />
-    <state width="1554" height="197" key="GridCell.Tab.0.center" timestamp="1609540272552">
-      <screen x="0" y="27" width="1600" height="873" />
+    <state width="1557" height="257" key="GridCell.Tab.0.center" timestamp="1610033904218">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="111" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1609283857337" />
+    <state width="1557" height="257" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1610033904218" />
     <state width="1554" height="197" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1609540272552" />
-    <state width="1554" height="197" key="GridCell.Tab.0.left" timestamp="1609540272552">
-      <screen x="0" y="27" width="1600" height="873" />
+    <state width="1557" height="257" key="GridCell.Tab.0.left" timestamp="1610033904218">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="111" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1609283857337" />
+    <state width="1557" height="257" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1610033904218" />
     <state width="1554" height="197" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1609540272552" />
-    <state width="1554" height="197" key="GridCell.Tab.0.right" timestamp="1609540272553">
-      <screen x="0" y="27" width="1600" height="873" />
+    <state width="1557" height="257" key="GridCell.Tab.0.right" timestamp="1610033904218">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="111" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1609283857337" />
+    <state width="1557" height="257" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1610033904218" />
     <state width="1554" height="197" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1609540272553" />
-    <state x="300" y="102" width="1022" height="737" key="SettingsEditor" timestamp="1609293829618">
-      <screen x="0" y="27" width="1600" height="873" />
+    <state x="300" y="74" width="1022" height="737" key="SettingsEditor" timestamp="1609936547054">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="300" y="74" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1609246460223" />
+    <state x="300" y="74" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1609936547054" />
     <state x="300" y="102" width="1022" height="737" key="SettingsEditor/0.27.1600.873@0.27.1600.873" timestamp="1609293829618" />
     <state x="671" y="310" width="247" height="314" key="cloudConfig.SelfSettingsDialog" timestamp="1609437581047">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state x="671" y="310" width="247" height="314" key="cloudConfig.SelfSettingsDialog/0.27.1600.873@0.27.1600.873" timestamp="1609437581047" />
+    <state x="447" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609936611802">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="447" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1609936611802" />
     <state x="579" y="344" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609081717078">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -195,18 +575,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="520" y="174" key="refactoring.ChangeSignatureDialog/0.0.1600.860@0.0.1600.860" timestamp="1609154694546" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1609955864978">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1609955864978" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1610043920943">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1610043920943" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/services/appartement.service.ts</url>
-          <line>17</line>
+          <line>19</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/services/appartement.service.ts</url>
-          <line>43</line>
+          <line>45</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

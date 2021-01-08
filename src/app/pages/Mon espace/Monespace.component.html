@@ -1,0 +1,165 @@
+<div class="main-wrapper">
+   <title-bar title="Bienvenue {{particulier.prenom}}  {{ particulier.nom }} " subtitle="Ceci est on espace client"></title-bar>
+   <div class="content">
+      <div class="container mt-4">
+            <div class="row">
+               <div class="col-md-4">
+                  <ul class="list-group">
+                        <li class="list-group-item clickable" (click)="onViewContrat(particulier.id)" [ngClass]="contratVar==true?'active':''">
+                           Mes Contrats
+                        </li>
+                        <li class="list-group-item clickable" (click)="onViewPaiement()" [ngClass]="paiementVar==true?'active':''">
+                           Mes Paiements
+                        </li>
+                        <li class="list-group-item clickable" (click)="onViewNotification()" [ngClass]="notificationVar==true?'active':''">
+                           Notifiactions
+                        </li>
+                        <li class="list-group-item clickable" (click)="onViewInforamtionPersonnel()" [ngClass]="informationPersoVar==true?'active':''">
+                                Mes Informations
+                        </li>
+                        <li class="list-group-item clickable">
+
+                        </li>
+                  </ul>
+               </div>
+               <div class="col-md-8">
+                   <span *ngIf="contratVar">
+                        <table class="table table-hover">
+                              <thead>
+                                 <tr>
+                                    <th>Date debut</th>
+                                    <th>Date Fin</th>
+                                    <th>Type Contrat</th>
+                                    <!--<th>Mensualite (€/Mois) </th>-->
+                                    <th>Bien</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                    <th></th>
+                                 </tr>
+                              </thead>
+                              <tbody *ngIf="contrats">
+                                    <tr *ngFor="let contrat of contrats._embedded.contratClientBiens">
+                                        <td>{{contrat.dateDebut | date }}</td>
+                                        <td>{{contrat.dateFin | date }}</td>
+                                        <td>{{ contrat.type}}</td>
+                                        <td>Bien</td>
+                                       <td *ngIf="contrat.estRetenue==false"><span class="badge badge-pill badge-primary text-uppercase">En Cours de traittement</span></td>
+                                        <td *ngIf="contrat.estRetenue==true"><span class="badge badge-pill badge-primary text-uppercase">Acceptee</span></td>
+                                       <td>
+                                          <button class="btn btn-sm btn-default" type="button">View</button>
+                                       </td>
+                                        <td>
+                                          <button class="btn btn-sm btn-warning" type="button" (click)="paie(contrat.id)">paier</button>
+                                       </td>
+                                    </tr>
+                              </tbody>
+                        </table>
+                    </span>
+
+
+                   <span *ngIf="informationPersoVar">
+                        <form>
+                          <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label for="inputEmail4">Prenom</label>
+                              <input type="text" class="form-control" id="inputEmail4" disabled="disabled" value="{{particulier.prenom}}">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label for="inputPassword4">Nom</label>
+                              <input type="text" class ="form-control" id = "inputPassword4" disabled="disabled" value="{{particulier.nom}}">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputPassword4">Email</label>
+                                <input type="email" class="form-control" id="inputPassword4" disabled="disabled" value="{{particulier.email}}">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-5">
+                              <label for="inputEmail4">CNI</label>
+                              <input type="text" class="form-control" id="inputEmail4" value="{{particulier.cni}}">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label for="inputPassword4">Date de naissance</label>
+                              <input type="date" class ="form-control" id = "inputPassword4" value="{{particulier.dateNaiss}}">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <fieldset>
+                                    <div class="form-check mt-4">
+                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                      <label class="form-check-label" for="gridRadios1">
+                                        Masculin
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            Feminine
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-5">
+                              <label for="inputCity">Adresse</label>
+                              <input type="text" class="form-control" id="inputCity" value="{{particulier.adresse}}">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label for="inputCity">Ville</label>
+                              <input type="text" class="form-control" id="inputCity" value="{{particulier.ville}}">
+                            </div>
+                            <div class="form-group col-md-3">
+                              <label for="inputZip">Code Postal</label>
+                              <input type="text" class="form-control" id="inputZip" value="{{particulier.codePostal}}">
+                            </div>
+                          </div>
+                            <div class="row">
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary">Modifier</button>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                            </div>
+                        </form>
+                    </span>
+               </div>
+            </div>
+      </div>
+
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="bg-secondary">
+         <section class="block-space contact-info">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-lg-4 col-md-12 mb-4">
+                     <div class="contact-media"> <i class="fa fa-map-marker"></i><span>Address:</span>
+                        <p>95800, 33 avenue des genottes, Cergy, France</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-4">
+                     <div class="contact-media"> <i class="fa fa-envelope"></i><span>Email Address</span><a href="#">
+                        abdouazizdiouf75@gmail.com</a>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-4">
+                     <div class="contact-media"> <i class="fa fa-phone"></i><span>Phone Number</span><a href="#">+33 6 25 86 29 75</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+   </div>
+</div>

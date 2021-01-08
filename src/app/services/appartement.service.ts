@@ -13,7 +13,8 @@ export class AppartementService {
   appartement: Appartement = new Appartement();
 
   public appartements: any;
-  public ahost = "http://immo-agence.fr:8888/appartements";
+  //public ahost = "http://immo-agence.fr:8888/appartements";
+  public ahost = "http://localhost:8888/appartements";
 
   constructor(private globalService: GlobalService, private http: HttpClient) { }
 

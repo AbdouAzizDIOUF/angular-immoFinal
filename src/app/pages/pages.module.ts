@@ -10,6 +10,9 @@ import { ContactComponent } from './Contact/Contact.component';
 import { AboutComponent } from './About/About.component';
 import { GlobalModule } from '../globalFrontendComponents/global.module';
 import { PagesRoutes } from './pages.routing';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MonespaceComponent} from './Mon espace/Monespace.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
    // Change this to your upload POST address:
@@ -21,16 +24,19 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
 
 @NgModule({
   imports: [
+    FormsModule, ReactiveFormsModule,
     CommonModule,
     GlobalModule,
     DropzoneModule,
+      NgbModule,
     RouterModule.forChild(PagesRoutes),
   ],
   declarations: [
 
     ContactComponent,
     AboutComponent,
-    BookingComponent
+    BookingComponent,
+    MonespaceComponent
   ],
   providers: [
    {

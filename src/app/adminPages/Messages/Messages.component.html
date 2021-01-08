@@ -1,0 +1,184 @@
+<div class="dashboard-content">
+    <div class="db-tile">
+        <h4 class="text-center">Liste des Contrats Biens</h4>
+    </div>
+    <div class="row">
+        <!-- Item -->
+        <div class="col-lg-6 col-md-6">
+            <div class="card mb-4">
+                <div class="card-body text-center">
+                    <i class="i-Add-User"></i>
+                    <div class="py-4">
+                        <h2 class="text-primary mb-2">
+                            <button (click)="getContratLocations()" class="btn btn-primary">Contrat En Location</button>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item -->
+        <div class="col-lg-6 col-md-6">
+            <div  class="card mb-4">
+                <div  class="card-body text-center">
+                    <i  class="i-Add-User"></i>
+                    <div  class="py-4">
+                        <h2  class="text-primary mb-2">
+                            <button (click)="getContratVentes()" class="btn btn-primary">Contrat En Vente</button>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12 mb-4">
+        <div class="card">
+
+
+            <div class="card-body" *ngIf="consulteContratLocationVar">
+                <div class="d-flex align-items-center">
+                    <div class="text-center">
+                        <img alt="" class="img-fluid rounded-circle" src="../../../assets/images/logo.png" width="90" height="90">
+                        <h6 class="mt-2 font-weight-bold" *ngIf="bienOne">{{bienOne.titre}}</h6>
+                    </div>
+                    <div class="flex-grow-1 px-5">
+                        <h4 class="mb-3" *ngIf="contratOne">Status du contrat :
+                            <span class="badge badge-pill badge-danger text-uppercase" *ngIf="contratOne.estRetenue==false">En Cours de traittement</span>
+                            <span class="badge badge-pill badge-info text-uppercase" *ngIf="contratOne.estRetenue==true">En Cours de Contrat</span>
+                        </h4>
+                        <div class="mb-4">
+                            <div class="detail-list mb-2">
+                                <div class="detail-list-label mb-1">
+                                    <small class="text-uppercase font-weight-bold" *ngIf="contratOne">Type Contrat: {{contratOne.type}}</small>
+                                </div>
+                            </div>
+                            <div class="detail-list mb-2">
+                                <div class="detail-list-label mb-1">
+                                    <i class="fa fa-calendar mr-2" aria-hidden="true"></i>  <small class="text-uppercase font-weight-bold">Duree du contrat</small>
+                                </div>
+                                <p class="m-0 text-small text-muted" *ngIf="contratOne">{{contratOne.dateDebut | date : fullDate}} -  {{contratOne.dateFin | date : fullDate}}</p>
+                            </div>
+                            <div class="detail-list mb-2">
+                                <div class="detail-list-label mb-1">
+                                    <i class="fa fa-info-circle mr-2" aria-hidden="true"></i> <small class="text-uppercase font-weight-bold">Prix Total</small>
+                                </div>
+                                <h4 class="m-0 text-small text-muted" *ngIf="bienOne">{{bienOne.price | number : 0}} Euro</h4>
+                            </div>
+                            <div class="detail-list mb-2">
+                                <div class="detail-list-label mb-1">
+                                    <i class="fa fa-phone mr-2" aria-hidden="true"></i> <small class="text-uppercase font-weight-bold">Info Client</small>
+                                </div>
+                                <p class="m-0 text-small text-muted" *ngIf="clientOne">{{clientOne.prenom}} &nbsp; {{clientOne.nom}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   email: {{clientOne.email}}  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="contratOne">
+                        <button class="btn btn-1 btn-primary" type="button" *ngIf="contratOne.estRetenue==false" (click)="onApprouve(contratOne.id, bienOne.id, clientOne.id)">Approuve</button>
+                        <button class="btn btn-1 btn-primary" type="button" *ngIf="contratOne.estRetenue==true">En cours de contrat</button>
+                        <button class="btn btn-1 btn-danger" type="button" *ngIf="contratOne.estRetenue==true" (click)="consulterPaiement(contratOne)" >Voir liste des paies</button>
+                        <button class="btn btn-1 btn-danger" type="button" *ngIf="contratOne.estRetenue==false" (click)="onRejetteContrat(contratOne.id)" >Rejetter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body" *ngIf="consulteContratVenteVar">
+                <div class="d-flex align-items-center">
+                    <div class="text-center" *ngIf="bienVente">
+                        <img alt="" class="img-fluid rounded-circle" src="../../../assets/images/logo.png" width="90" height="90">
+                        <h6 class="mt-2 font-weight-bold">{{bienVente.titre}}</h6>
+                    </div>
+                    <div class="flex-grow-1 px-5" *ngIf="contratOneVente">
+                        <h4 class="mb-3">Status du contrat : {{contratOneVente.id}}
+                            <span class="badge badge-pill badge-danger text-uppercase" *ngIf="contratOneVente.estRetenue==false">En Cours de traittement</span>
+                            <span class="badge badge-pill badge-info text-uppercase" *ngIf="contratOneVente.estRetenue==true">En Cours de Contrat</span>
+                        </h4>
+                        <div class="mb-4">
+                            <div class="detail-list mb-2">
+                                <div class="detail-list-label mb-1">
+                                    <small class="text-uppercase font-weight-bold" *ngIf="contratOneVente">Type Contrat: {{contratOneVente.type}}</small>
+                                </div>
+                            </div>
+                            <div class="detail-list mb-2">
+                                <div class="detail-list-label mb-1">
+                                    <i class="fa fa-calendar mr-2" aria-hidden="true"></i>  <small class="text-uppercase font-weight-bold">Duree du contrat</small>
+                                </div>
+                                <p class="m-0 text-small text-muted" *ngIf="contratOneVente">{{contratOneVente.dateDebut | date : fullDate}} -  {{contratOneVente.dateFin | date : fullDate}}</p>
+                            </div>
+                            <div class="detail-list mb-2">
+                                <div class="detail-list-label mb-1">
+                                    <i class="fa fa-info-circle mr-2" aria-hidden="true"></i> <small class="text-uppercase font-weight-bold">Prix Total</small>
+                                </div>
+                                <h4 class="m-0 text-small text-muted" *ngIf="bienVente">{{bienVente.price | number : 0}} Euro</h4>
+                            </div>
+                            <div class="detail-list mb-2" *ngIf="clientVente">
+                                <div class="detail-list-label mb-1">
+                                    <i class="fa fa-phone mr-2" aria-hidden="true"></i> <small class="text-uppercase font-weight-bold">Info Client</small>
+                                </div>
+                                <p class="m-0 text-small text-muted">{{clientVente.prenom}} &nbsp; {{clientVente.nom}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   email: {{clientVente.email}}  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="contratOneVente">
+                        <button class="btn btn-1 btn-primary" type="button" *ngIf="contratOneVente.estRetenue===false" (click)="onApprouve(contratOneVente.id, bienVente.id, clientVente.id)">Approuve</button>
+                        <button class="btn btn-1 btn-primary" type="button" *ngIf="contratOneVente.estRetenue===true">En cours de contrat</button>
+                        <button class="btn btn-1 btn-danger" type="button" *ngIf="contratOneVente.estRetenue===true" (click)="consulterPaiement(contratOneVente)" >Voir liste des paies</button>
+                        <button class="btn btn-1 btn-danger" type="button" *ngIf="contratOneVente.estRetenue===false" (click)="onRejetteContrat(contratOneVente)" >Rejetter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-list-box table-responsive invoices with-icons">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Date de debut</th>
+                            <th>Date de fin</th>
+                            <th>Status (Approuve/en Traittement)</th>
+                            <th>Bien</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="contratLocationVar==true">
+                        <tr *ngFor="let contrat of contratLocations">
+                            <td>{{contrat.id}}</td>
+                            <td>{{contrat.type}}</td>
+                            <td>{{contrat.dateDebut | date : fullDate}}</td>
+                            <td>{{contrat.dateFin | date : fullDate}}</td>
+                            <td *ngIf="contrat.estRetenue==true"><span class="badge badge-pill badge-primary text-uppercase text-center">Approuve</span></td>
+                            <td *ngIf="contrat.estRetenue==false"><span class="badge badge-pill badge-warning text-uppercase">En cours de traittement</span></td>
+                            <!--<td><img class="img-fluid rounded-circle shadow-lg text-center" width="20px" height="20px" alt=""></td>--><!--[src]="this.appartementService.getGlobalResource().host+'/app/photoProduit1/'+bien.id"-->
+                            <td>
+                                <button class="btn btn-sm btn-btn-success text-center" type="button" (click)="consulteContratLocation(contrat.id)">Consulter {{contrat.id}}</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-danger text-center" type="button" (click)="consulterPaiement(contrat.id)">Paiements List</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody *ngIf="contratVenteVar==true">
+                        <tr *ngFor="let cons of contratVentes">
+                            <td>{{cons.id}}</td>
+                            <td>{{cons.type}}</td>
+                            <td>{{cons.dateDebut | date : fullDate}}</td>
+                            <td>{{cons.dateFin | date : fullDate}}</td>
+                            <td *ngIf="cons.estRetenue===true"><span class="badge badge-pill badge-primary text-uppercase text-center">{{cons.estRetenue}}Approuve</span></td>
+                            <td *ngIf="cons.estRetenue===false" style="text-align: center;"><span class="badge badge-pill badge-warning text-uppercase">En cours de traittement</span></td>
+                            <!--<td><img class="img-fluid rounded-circle shadow-lg text-center" width="20px" height="20px" alt=""></td>--><!--[src]="this.appartementService.getGlobalResource().host+'/app/photoProduit1/'+bien.id"-->
+                            <td>
+                                <button class="btn btn-sm btn-btn-success text-center" type="button" (click)="consulteContratLocation(cons.id)">Consulter  {{cons.id}}</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-danger text-center" type="button" (click)="consulterPaiement(cons.id)">Paiements List</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

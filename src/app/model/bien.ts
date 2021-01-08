@@ -9,4 +9,5 @@ export class Bien {
     public ville:  string;
     public latitude: number;
     public longitude: number;
+    public status: string;
 }

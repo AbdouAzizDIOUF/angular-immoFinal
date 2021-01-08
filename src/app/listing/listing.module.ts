@@ -15,6 +15,16 @@ import { SidebarLayoutOneComponent } from './SidebarLayoutOne/SidebarLayoutOne.c
 import { ListingRoutes } from './listing.routing';
 import { GlobalModule } from '../globalFrontendComponents/global.module';
 import {FormsModule} from '@angular/forms';
+import {BureauFullWidthComponent} from './BureauFullWidth/BureauFullWidth.component';
+import {AppartementFullWidthComponent} from './AppartementFullWidth/AppartementFullWidth.component';
+import {VillaFullWidthComponent} from './VillaFullWidth/VillaFullWidth.component';
+import {TerrainFullWidthComponent} from './TerrainFullWidth/TerrainFullWidth.component';
+import {StudioFullWidthComponent} from './StudioFullWidth/StudioFullWidth.component';
+import {AppartementDetailOneComponent} from './AppartementDetailOne/AppartementDetailOne.component';
+import {BureauDetailOneComponent} from './BureauDetailOne/BureauDetailOne.component';
+import {TerrainDetailOneComponent} from './TerrainDetailOne/TerrainDetailOne.component';
+import {VillaDetailOneComponent} from './VillaDetailOne/VillaDetailOne.component';
+import {StudioDetailOneComponent} from './StudioDetailOne/StudioDetailOne.component';
 
 
 @NgModule({
@@ -33,7 +43,17 @@ import {FormsModule} from '@angular/forms';
      ListingDetailOneComponent,
      GallerySliderComponent,
      SmallGallerySliderComponent,
-     SidebarLayoutOneComponent
+     SidebarLayoutOneComponent,
+     BureauFullWidthComponent,
+     AppartementFullWidthComponent,
+     VillaFullWidthComponent,
+     TerrainFullWidthComponent,
+     StudioFullWidthComponent,
+     AppartementDetailOneComponent,
+     BureauDetailOneComponent,
+     TerrainDetailOneComponent,
+     VillaDetailOneComponent,
+     StudioDetailOneComponent,
    ]
 })
 

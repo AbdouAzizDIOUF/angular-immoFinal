@@ -11,12 +11,6 @@ export class GridFullWidthComponent implements OnInit{
 
     public href: string;
 
-    public biens: any;
-    public appartements: any;
-    public burreaux: any;
-    public villas: any;
-    public terrains: any;
-
    Data : any = [
                      {
                         badge    : 'Now Open',

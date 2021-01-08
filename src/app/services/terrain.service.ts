@@ -10,7 +10,9 @@ import {Terrain} from '../model/terrain';
 })
 export class TerrainService {
 
-  public thost = "http://immo-agence.fr:8888/terrains";
+  //public thost = "http://immo-agence.fr:8888/terrains";
+  public thost = "http://localhost:8888/terrains";
+
   constructor(private globalService: GlobalService, private http: HttpClient) { }
 
   public getTerrain(){

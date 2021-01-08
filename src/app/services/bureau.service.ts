@@ -9,7 +9,8 @@ import {Bureau} from '../model/bureau';
 })
 export class BureauService {
 
-  public bhost = "http://immo-agence.fr:8888/bureaus";
+  //public bhost = "http://immo-agence.fr:8888/bureaus";
+  public bhost = "http://localhost:8888/bureaus";
   constructor(private globalService: GlobalService, private http: HttpClient) { }
 
   public getBurreaus() {

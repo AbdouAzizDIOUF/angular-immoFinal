@@ -20,6 +20,8 @@ import {AppModule} from '../app.module';
 import {PlacesComponent} from '../singlecomp/places.component';
 import {NgAisModule} from 'angular-instantsearch';
 import {AgmCoreModule} from '@agm/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
    // Change this to your upload POST address:
@@ -45,8 +47,10 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
 
     imports: [
         CommonModule,
+        CommonModule,
         DropzoneModule,
         FormsModule,
+        NgbModule,
         RouterModule.forChild(AdminRoutes),
         NgAisModule.forRoot(),
         AgmCoreModule.forRoot({

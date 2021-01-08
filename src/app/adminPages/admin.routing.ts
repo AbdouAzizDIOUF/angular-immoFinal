@@ -20,15 +20,15 @@ export const AdminRoutes: Routes = [
       component: AdminDashboardlComponent
     },
     {
-      path: 'messages',
+      path: 'contrats',
       component: MessagesComponent
     },
     {
-      path: 'bookings',
+      path: 'paies',
       component: BookingsComponent
     },
     {
-      path: 'reviews',
+      path: 'contacts',
       component: ReviewsComponent
     },
     {

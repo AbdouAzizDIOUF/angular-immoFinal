@@ -13,7 +13,9 @@ import {Terrain} from '../model/terrain';
 
 export class VillaService {
 
-  public vhost = "http://immo-agence.fr:8888/villas";
+  //public vhost = "http://immo-agence.fr:8888/villas";
+  public vhost = "http://localhost:8888/villas";
+
   constructor(private globalService: GlobalService, private http: HttpClient) { }
 
   public getVillas(){

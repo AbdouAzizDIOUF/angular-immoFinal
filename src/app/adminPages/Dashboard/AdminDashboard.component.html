@@ -1,72 +1,77 @@
 <div class="dashboard-content">
 
     <div class="row">
-      <!-- Item -->
-      <div class="col-lg-3 col-md-6">
-         <div class="card mb-4">
-            <div class="card-body text-center">
-               <i class="i-Add-User"></i>
-               <div class="py-4">
-                  <h2 class="text-primary mb-2">
-                     <button (click)="getAppartements()" class="btn btn-primary">Appartement</button></h2>
-                  <!--<p class="text-muted mt-2 mb-0">New Leads</p>-->
-               </div>
+        <!-- Item -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card mb-4">
+                <div class="card-body text-center">
+                    <i class="i-Add-User"></i>
+                    <div class="py-4">
+                        <h2 class="text-primary mb-2">
+                            <button (click)="getAppartements()" class="btn btn-primary">Appartement</button></h2>
+                        <!--<p class="text-muted mt-2 mb-0">New Leads</p>-->
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <!-- Item -->
-      <div class="col-lg-3 col-md-6">
-         <div  class="card   mb-4">
-            <div  class="card-body text-center">
-               <i  class="i-Add-User"></i>
-               <div  class="py-4">
-                  <h2  class="text-primary mb-2">
-                     <button (click)="getBurreaux()" class="btn btn-primary">Bureau</button>
-                  </h2>
-                  <!--<p  class="text-muted mt-2 mb-0">Total Views</p>-->
-               </div>
+        </div>
+        <!-- Item -->
+        <div class="col-lg-3 col-md-6">
+            <div  class="card   mb-4">
+                <div  class="card-body text-center">
+                    <i  class="i-Add-User"></i>
+                    <div  class="py-4">
+                        <h2  class="text-primary mb-2">
+                            <button (click)="getBurreaux()" class="btn btn-primary">Bureau</button>
+                        </h2>
+                        <!--<p  class="text-muted mt-2 mb-0">Total Views</p>-->
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <!-- Item -->
-      <div class="col-lg-3 col-md-6">
-         <div  class="card   mb-4">
-            <div  class="card-body text-center">
-               <i  class="i-Add-User"></i>
-               <div  class="py-4">
-                  <h2  class="text-primary mb-2">
-                     <button (click)="getVillas()" class="btn btn-primary">Villa</button>
-                  </h2>
-                  <!--<p  class="text-muted mt-2 mb-0">Online</p>-->
-               </div>
+        </div>
+        <!-- Item -->
+        <div class="col-lg-3 col-md-6">
+            <div  class="card   mb-4">
+                <div  class="card-body text-center">
+                    <i  class="i-Add-User"></i>
+                    <div  class="py-4">
+                        <h2  class="text-primary mb-2">
+                            <button (click)="getVillas()" class="btn btn-primary">Villa</button>
+                        </h2>
+                        <!--<p  class="text-muted mt-2 mb-0">Online</p>-->
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <!-- Item -->
-      <div class="col-lg-3 col-md-6">
-         <div  class="card   mb-4">
-            <div  class="card-body text-center">
-               <i  class="i-Add-User"></i>
-               <div  class="py-4">
-                  <h2  class="text-primary mb-2">
-                     <button (click)="getTerrains()" class="btn btn-primary">Terrain</button>
-                  </h2>
-                  <!--<p  class="text-muted mt-2 mb-0">Total Users</p>-->
-               </div>
+        </div>
+        <!-- Item -->
+        <div class="col-lg-3 col-md-6">
+            <div  class="card   mb-4">
+                <div  class="card-body text-center">
+                    <i  class="i-Add-User"></i>
+                    <div  class="py-4">
+                        <h2  class="text-primary mb-2">
+                            <button (click)="getTerrains()" class="btn btn-primary">Terrain</button>
+                        </h2>
+                        <!--<p  class="text-muted mt-2 mb-0">Total Users</p>-->
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
+    </div>
 
-   <div class="row">
+    <div class="row">
 
        <span *ngIf="update_appartement" class="col-lg-12 col-md-12 mb-4">
             <form (ngSubmit) = "onSubmiteUpdateAppartement(appartement.id, appartement)">
                 <div class="form-row">
-                  <div class="form-group col-md-7">
-                    <label for="titre">Titre {{appartement.id}}</label>
+                  <div class="form-group col-md-5">
+                    <label for="titre">Titre</label>
                     <input type="text" class ="form-control" id = "titre"
                            [(ngModel)] = "appartement.titre" name = "titre">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="titre">Statut</label>
+                    <input type="text" class ="form-control" id = "status"
+                           [(ngModel)] = "appartement.status" name = "status">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="surface">Surface: </label>
@@ -181,14 +186,21 @@
             </form>
       </span>
 
-      <span *ngIf="create_appartement" class="col-lg-12 col-md-12 mb-4">
+        <span *ngIf="create_appartement" class="col-lg-12 col-md-12 mb-4">
             <form (ngSubmit) = "onSubmiteCreateAppartement()">
                 <div class="form-row">
-                  <div class="form-group col-md-7">
+                  <div class="form-group col-md-5">
                     <label for="titre">Titre</label>
                     <input type="text" class ="form-control" id = "titre"
                            [(ngModel)] = "appartement.titre" name = "titre">
                   </div>
+
+                  <div class="form-group col-md-2">
+                    <label for="status">Statut</label>
+                    <input type="text" class ="form-control" id = "status"
+                           [(ngModel)] = "appartement.status" name = "status">
+                  </div>
+
                   <div class="form-group col-md-2">
                     <label for="surface">Surface: </label>
                     <input type="text" class ="form-control" id = "surface"
@@ -260,14 +272,21 @@
             </form>
       </span>
 
-      <span *ngIf="update_bureau" class="col-lg-12 col-md-12 mb-4">
+        <span *ngIf="update_bureau" class="col-lg-12 col-md-12 mb-4">
             <form (ngSubmit) = "onSubmiteUpdateBureau(bureau.id, bureau)">
                 <div class="form-row">
-                  <div class="form-group col-md-7">
+                  <div class="form-group col-md-5">
                     <label for="titre">Titre</label>
                     <input type="text" class ="form-control" id = "titre"
                            [(ngModel)] = "bureau.titre" name = "titre">
                   </div>
+
+                  <div class="form-group col-md-2">
+                    <label for="status">Statut</label>
+                    <input type="text" class ="form-control" id = "status"
+                           [(ngModel)] = "bureau.status" name = "status">
+                  </div>
+
                   <div class="form-group col-md-2">
                     <label for="surface">Surface: </label>
                     <input type="text" class ="form-control" id = "surface"
@@ -374,13 +393,18 @@
                 </div>
             </form>
       </span>
-      <span *ngIf="create_bureau" class="col-lg-12 col-md-12 mb-4">
+        <span *ngIf="create_bureau" class="col-lg-12 col-md-12 mb-4">
             <form (ngSubmit) = "onSubmiteCreateBurreau()">
                 <div class="form-row">
-                  <div class="form-group col-md-7">
+                  <div class="form-group col-md-5">
                     <label for="titre">Titre</label>
                     <input type="text" class ="form-control" id = "titre"
                            [(ngModel)] = "bureau.titre" name = "titre">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="status">Statut</label>
+                    <input type="text" class ="form-control" id = "status"
+                           [(ngModel)] = "bureau.status" name = "status">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="surface">Surface: </label>
@@ -453,14 +477,21 @@
             </form>
       </span>
 
-      <span *ngIf="create_villa" class="col-lg-12 col-md-12 mb-4">
+        <span *ngIf="create_villa" class="col-lg-12 col-md-12 mb-4">
             <form (ngSubmit) = "onSubmiteCreateVilla()">
                 <div class="form-row">
-                  <div class="form-group col-md-7">
+                  <div class="form-group col-md-5">
                     <label for="titre">Titre</label>
                     <input type="text" class ="form-control" id = "titre"
                            [(ngModel)] = "villa.titre" name = "titre">
                   </div>
+
+                  <div class="form-group col-md-2">
+                    <label for="status">Statut</label>
+                    <input type="text" class ="form-control" id = "status"
+                           [(ngModel)] = "villa.status" name = "status">
+                  </div>
+
                   <div class="form-group col-md-2">
                     <label for="surface">Surface: </label>
                     <input type="text" class ="form-control" id = "surface"
@@ -538,13 +569,19 @@
                 </div>
             </form>
       </span>
-      <span *ngIf="update_villa" class="col-lg-12 col-md-12 mb-4">
+        <span *ngIf="update_villa" class="col-lg-12 col-md-12 mb-4">
             <form (ngSubmit) = "onSubmiteUpdateVilla(villa.id, villa)">
                 <div class="form-row">
-                  <div class="form-group col-md-7">
+                  <div class="form-group col-md-5">
                     <label for="titre">Titre</label>
                     <input type="text" class ="form-control" id = "titre"
                            [(ngModel)] = "villa.titre" name = "titre">
+                  </div>
+
+                  <div class="form-group col-md-2">
+                    <label for="status">Statut</label>
+                    <input type="text" class ="form-control" id = "status"
+                           [(ngModel)] = "villa.status" name = "status">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="surface">Surface: </label>
@@ -579,9 +616,9 @@
                   <div class="form-group col-md-5">
                     <label>adresse: </label>
                     <app-places
-                        type="address"
-                        (onChange)="onSuggestionV($event)"
-                        (onClear)="onClear($event)">
+                            type="address"
+                            (onChange)="onSuggestionV($event)"
+                            (onClear)="onClear($event)">
                     </app-places>
                   </div>
                   <div class="form-group col-md-2">
@@ -658,14 +695,21 @@
                 </div>
             </form>
       </span>
-      <span *ngIf="create_terrain" class="col-lg-12 col-md-12 mb-4">
+        <span *ngIf="create_terrain" class="col-lg-12 col-md-12 mb-4">
             <form (ngSubmit) = "onSubmiteCreateTerrain()">
                 <div class="form-row">
-                  <div class="form-group col-md-7">
+                  <div class="form-group col-md-5">
                     <label for="titre">Titre</label>
                     <input type="text" class ="form-control" id = "titre"
                            [(ngModel)] = "terrain.titre" name = "titre">
                   </div>
+
+                  <div class="form-group col-md-2">
+                    <label for="status">Statut</label>
+                    <input type="text" class ="form-control" id = "status"
+                           [(ngModel)] = "terrain.status" name = "status">
+                  </div>
+
                   <div class="form-group col-md-2">
                     <label for="surface">Surface: </label>
                     <input type="text" class ="form-control" id = "surface"
@@ -682,8 +726,8 @@
                   <div class="form-group col-md-12">
                     <label for="description">Description: </label>
                       <textarea class="form-control form-control-alternative" placeholder="Description" id="description" rows="3" [(ngModel)] = "terrain.description" name = "description"></textarea>
-                    <!--<textarea rows="1" cols="12" class ="form-control"
-                              [(ngModel)] = "terrain.description" name = "description"> </textarea>-->
+                      <!--<textarea rows="1" cols="12" class ="form-control"
+                                [(ngModel)] = "terrain.description" name = "description"> </textarea>-->
                   </div>
                 </div>
                 <div class="form-row">
@@ -728,14 +772,21 @@
             </form>
       </span>
 
-      <span *ngIf="update_terrain" class="col-lg-12 col-md-12 mb-4">
+        <span *ngIf="update_terrain" class="col-lg-12 col-md-12 mb-4">
             <form (ngSubmit) = "onSubmiteUpdateTerrain(terrain.id, terrain)">
                 <div class="form-row">
-                  <div class="form-group col-md-7">
+                  <div class="form-group col-md-5">
                     <label for="titre">Titre</label>
                     <input type="text" class ="form-control" id = "titre"
                            [(ngModel)] = "terrain.titre" name = "titre" required [min]="2" [maxLength]="100">
                   </div>
+
+                  <div class="form-group col-md-2">
+                    <label for="status">Statut</label>
+                    <input type="text" class ="form-control" id = "status"
+                           [(ngModel)] = "terrain.status" name = "status">
+                  </div>
+
                   <div class="form-group col-md-2">
                     <label for="surface">Surface: </label>
                     <input type="text" class ="form-control" id = "surface"
@@ -840,102 +891,107 @@
             </form>
       </span>
 
-      <div class="col-lg-12 col-md-12 mb-4">
-         <div class="card">
-            <div class="db-tile" *ngIf="appartements">
-               <button class="btn btn-warning" (click)="OnCreateAppartement()"> Creer Appartement </button>
-            </div>
-            <div class="db-tile" *ngIf="burreaux">
-               <button class="btn btn-warning" (click)="OnCreateBureau()"> Creer Bureau </button>
-            </div>
-            <div class="db-tile" *ngIf="villas">
-               <button class="btn btn-warning" (click)="OnCreateVillas()"> Creer Villa </button>
-            </div>
-            <div class="db-tile" *ngIf="terrains">
-               <button class="btn btn-warning" (click)="OnCreateTerrain()"> Creer Terrain </button>
-            </div>
-            <div class="dashboard-list-box table-responsive invoices with-icons">
-               <table class="table table-hover">
-                  <thead>
-                     <tr>
-                        <th>ID</th>
-                        <th>Image</th>
-                        <th>Titre</th>
-                        <th>Surface (m²)</th>
-                        <th>Price</th>
-                        <th>Ville</th>
-                        <th>Avaible</th>
-                     </tr>
-                  </thead>
-                  <tbody *ngIf="appartements">
-                        <tr *ngFor="let bien of appartements._embedded.appartements">
-                           <td>{{bien.id}}</td>
-                           <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit1/'+bien.id" width="50" height="50" alt=""></td>
-                           <td>{{bien.titre}}</td>
-                           <td>{{bien.surface}}</td>
-                           <td>{{bien.price}}</td>
-                           <td>{{bien.ville}}</td>
-                           <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
-                           <td>
-                              <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteA(bien.id)">Delete</button>
-                              <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateA(bien.id)">Update</button>
-                              <button class="btn btn-sm btn-info" type="button" (click)="OnDetailA(bien.id)">View</button>
-                           </td>
+        <div class="col-lg-12 col-md-12 mb-4">
+            <div class="card">
+                <div class="db-tile" *ngIf="appartements">
+                    <button class="btn btn-warning" (click)="OnCreateAppartement()"> Creer Appartement </button>
+                </div>
+                <div class="db-tile" *ngIf="burreaux">
+                    <button class="btn btn-warning" (click)="OnCreateBureau()"> Creer Bureau </button>
+                </div>
+                <div class="db-tile" *ngIf="villas">
+                    <button class="btn btn-warning" (click)="OnCreateVillas()"> Creer Villa </button>
+                </div>
+                <div class="db-tile" *ngIf="terrains">
+                    <button class="btn btn-warning" (click)="OnCreateTerrain()"> Creer Terrain </button>
+                </div>
+                <div class="dashboard-list-box table-responsive invoices with-icons">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Titre</th>
+                            <th>Surface (m²)</th>
+                            <th>Price</th>
+                            <th>Ville</th>
+                            <th>Status</th>
+                            <th>Avaible</th>
                         </tr>
-                  </tbody>
-                  <tbody *ngIf="burreaux">
-                  <tr *ngFor="let bien of burreaux._embedded.bureaus">
-                     <td>{{bien.id}}</td>
-                     <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit1/'+bien.id" width="50" height="50" alt=""></td>
-                     <td>{{bien.titre}}</td>
-                     <td>{{bien.surface}}</td>
-                     <td>{{bien.price}}</td>
-                     <td>{{bien.ville}}</td>
-                     <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
-                     <td>
-                        <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteB(bien.id)">Delete</button>
-                        <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateB(bien.id)">Update</button>
-                        <button class="btn btn-sm btn-info" type="button" (click)="OnDetailB(bien.id)">View</button>
-                     </td>
-                  </tr>
-                  </tbody>
-                  <tbody *ngIf="villas">
-                  <tr *ngFor="let bien of villas._embedded.villas">
-                     <td>{{bien.id}}</td>
-                     <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.bureauService.getGlobalResource().host+'/vil/photoProduit1/'+bien.id" width="50" height="50" alt=""></td>
-                     <td>{{bien.titre}}</td>
-                     <td>{{bien.surface}}</td>
-                     <td>{{bien.price}}</td>
-                     <td>{{bien.ville}}</td>
-                     <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
-                     <td>
-                        <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteV(bien.id)">Delete</button>
-                        <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateV(bien.id)">Update</button>
-                        <button class="btn btn-sm btn-info" type="button" (click)="OnDetailV(bien.id)">View</button>
-                     </td>
-                  </tr>
-                  </tbody>
-                  <tbody *ngIf="terrains">
-                  <tr *ngFor="let bien of terrains._embedded.terrains">
-                     <td>{{bien.id}}</td>
-                     <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit1/'+bien.id" width="60" height="80" alt=""></td>
-                     <td>{{bien.titre}}</td>
-                     <td>{{bien.surface}}</td>
-                     <td>{{bien.price}}</td>
-                     <td>{{bien.ville}}</td>
-                     <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
-                     <td>
-                        <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteT(bien.id)">Delete</button>
-                        <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateT(bien.id)">Update</button>
-                        <button class="btn btn-sm btn-info" type="button" (click)="OnDetailT(bien.id)">View</button>
-                     </td>
-                  </tr>
-                  </tbody>
-               </table>
+                        </thead>
+                        <tbody *ngIf="appartements">
+                        <tr *ngFor="let bien of appartements._embedded.appartements">
+                            <td>{{bien.id}}</td>
+                            <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.appartementService.getGlobalResource().host+'/app/photoProduit1/'+bien.id" width="50" height="50" alt=""></td>
+                            <td>{{bien.titre}}</td>
+                            <td>{{bien.surface}}</td>
+                            <td>{{bien.price}}</td>
+                            <td>{{bien.ville}}</td>
+                            <td>{{bien.status}}</td>
+                            <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteA(bien.id)">Delete</button>
+                                <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateA(bien.id)">Update</button>
+                                <button class="btn btn-sm btn-info" type="button" (click)="OnDetailA(bien.id)">View</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody *ngIf="burreaux">
+                        <tr *ngFor="let bien of burreaux._embedded.bureaus">
+                            <td>{{bien.id}}</td>
+                            <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.bureauService.getGlobalResource().host+'/bur/photoProduit1/'+bien.id" width="50" height="50" alt=""></td>
+                            <td>{{bien.titre}}</td>
+                            <td>{{bien.surface}}</td>
+                            <td>{{bien.price}}</td>
+                            <td>{{bien.ville}}</td>
+                            <td>{{bien.status}}</td>
+                            <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteB(bien.id)">Delete</button>
+                                <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateB(bien.id)">Update</button>
+                                <button class="btn btn-sm btn-info" type="button" (click)="OnDetailB(bien.id)">View</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody *ngIf="villas">
+                        <tr *ngFor="let bien of villas._embedded.villas">
+                            <td>{{bien.id}}</td>
+                            <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.bureauService.getGlobalResource().host+'/vil/photoProduit1/'+bien.id" width="50" height="50" alt=""></td>
+                            <td>{{bien.titre}}</td>
+                            <td>{{bien.surface}}</td>
+                            <td>{{bien.price}}</td>
+                            <td>{{bien.ville}}</td>
+                            <td>{{bien.status}}</td>
+                            <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteV(bien.id)">Delete</button>
+                                <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateV(bien.id)">Update</button>
+                                <button class="btn btn-sm btn-info" type="button" (click)="OnDetailV(bien.id)">View</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody *ngIf="terrains">
+                        <tr *ngFor="let bien of terrains._embedded.terrains">
+                            <td>{{bien.id}}</td>
+                            <td><img class="img-fluid rounded-circle shadow-lg" [src]="this.terrainService.getGlobalResource().host+'/ter/photoProduit1/'+bien.id" width="60" height="80" alt=""></td>
+                            <td>{{bien.titre}}</td>
+                            <td>{{bien.surface}}</td>
+                            <td>{{bien.price}}</td>
+                            <td>{{bien.ville}}</td>
+                            <td>{{bien.status}}</td>
+                            <td><span class="badge badge-pill badge-primary text-uppercase">{{bien.avaible}}</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-danger" type="button"  (click)="OnDeleteT(bien.id)">Delete</button>
+                                <button class="btn btn-sm btn-primary" type="button" (click)="OnUpdateT(bien.id)">Update</button>
+                                <button class="btn btn-sm btn-info" type="button" (click)="OnDetailT(bien.id)">View</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-         </div>
 
-        <span *ngIf="appartementOne">
+            <span *ngIf="appartementOne">
             <div class="card">
                   <div class="card-header text-center">
                     {{appartementOne.titre }}, {{ appartementOne.etage}} ième etage, {{ appartementOne.nombrePieces}} pieces
@@ -977,7 +1033,7 @@
        </span>
 
 
-       <span *ngIf="bureauOne">
+            <span *ngIf="bureauOne">
             <div class="card">
                   <div class="card-header text-center">
                     {{bureauOne.titre}}, {{ bureauOne.etage}} ième etage, {{ bureauOne.nbLocaux}} Locaux
@@ -1016,7 +1072,7 @@
             </div>
        </span>
 
-       <span *ngIf="villaOne">
+            <span *ngIf="villaOne">
             <div class="card">
                   <div class="card-header text-center">
                     {{villaOne.titre }}, {{ villaOne.etage}} ième etage, {{ villaOne.nombrePiece}} pieces
@@ -1057,7 +1113,7 @@
             </div>
        </span>
 
-       <span *ngIf="terrainOne">
+            <span *ngIf="terrainOne">
             <div class="card">
                   <div class="card-header text-center text-uppercase">
                     {{terrainOne.titre }}, il est vendu a {{terrainOne.price}} €, surperficie : {{terrainOne.surface}}
@@ -1097,6 +1153,6 @@
        </span>
 
 
-      </div>
-   </div>
+        </div>
+    </div>
 </div>

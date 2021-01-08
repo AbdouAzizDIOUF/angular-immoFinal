@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import {APP_INITIALIZER, NgModule} from '@angular/core';
-import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
 import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
@@ -21,23 +21,31 @@ import {AdminPanelLayoutComponent} from './layouts/adminPanel/AdminPanelLayout.c
 import {AdminHeaderComponent} from './core/AdminHeader/AdminHeader.component';
 import {AdminSidebarComponent} from './core/AdminSidebar/AdminSidebar.component';
 import {AdminMenuItems} from './core/AdminHeader/admin-menu-items';
-import {AgmCoreModule} from '@agm/core';
-import { PlacesComponent } from './singlecomp/places.component';
-import {NgAisModule} from 'angular-instantsearch';
 import {KeycloakAngularModule, KeycloakService} from 'keycloak-angular';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {RequestInterceptorService} from "./services/request-interceptor.service";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PopupMessageComponent } from './alets/popup-message/popup-message.component';
+import { PopupConfirmeDemandeComponent } from './alets/popup-confirme-demande/popup-confirme-demande.component';
+import { PopupConfirmeDeleteComponent } from './alets/popup-confirme-delete/popup-confirme-delete.component';
 
 // initialisation de la service keycloakSecurity avant la demarrage de l'appli
 function initializeKeycloak(keycloak: KeycloakService) {
     return () =>
         keycloak.init({
             config: {
-                /* url:"http://immo-agence.fr:8889/auth/",
+                url:"http://localhost:8889/auth/",
+                realm:"IMMO-REALM",
+                clientId:"angular"
+                /*url: "http://immo-agence.fr:8889/auth/",
+                realm: "IMMO-REALM",
+                clientId: "angular"*/
+                /*url:"http://immo-agence.fr:8889/auth/",
                 realm:"IMMO AGENCE",
                 clientId:"AngularImmoApp"*/
-                url: 'http://localhost:8889/auth/',
+               /* url: 'http://localhost:8889/auth/',
                 realm: 'immo-realmTest',
-                clientId: 'GuardTest',
+                clientId: 'GuardTest',*/
             },
             initOptions: {
                 onLoad: 'check-sso',
@@ -64,6 +72,9 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
         AdminPanelLayoutComponent,
         AdminHeaderComponent,
         AdminSidebarComponent,
+        PopupMessageComponent,
+        PopupConfirmeDemandeComponent,
+        PopupConfirmeDeleteComponent,
     ],
     imports: [
         BrowserModule,
@@ -75,14 +86,14 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
         }),*/
         HttpClientModule,
         KeycloakAngularModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgbModule
+
     ],
     providers: [
-        {
-            provide:APP_INITIALIZER,
-            deps:[KeycloakService],
-            useFactory:initializeKeycloak,
-            multi:true
-        },
+        {provide:APP_INITIALIZER, deps:[KeycloakService], useFactory:initializeKeycloak, multi:true},
+        /*{provide:HTTP_INTERCEPTORS, useClass:RequestInterceptorService, multi:true},*/// intercepte toutes les requettes emisent
 
 
         MenuItems,
