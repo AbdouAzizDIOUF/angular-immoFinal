@@ -13,23 +13,23 @@ import { Observable } from 'rxjs';
 })
 export class ContratService{
 
-  //public ahost = "http://immo-agence.fr:8888/contrats/";
-  public cbhost = "http://localhost:8888/contrats/";
+   // public cbhost = "http://immo-agence.fr:8888/contrats/";
+   public cbhost = "http://localhost:8888/contrats/";
 
-  //public cthost = "http://immo-agence.fr:8888/contratClientBiens/search/contratType?key=";
-  public cthost = "http://localhost:8888/contratClientBiens/search/contratType?key=";
+    //public cthost = "http://immo-agence.fr:8888/contratClientBiens/search/contratType?key=";
+   public cthost = "http://localhost:8888/contratClientBiens/search/contratType?key=";
 
-  //public CBChost = "http://immo-agence.fr:8888/contratClientBiens/"
-  public chost = "http://localhost:8888/contratClientBiens/";
+   //public chost = "http://immo-agence.fr:8888/contratClientBiens/"
+   public chost = "http://localhost:8888/contratClientBiens/";
 
-  //public CBBhoste = "http://localhost:8888/contratClientBiens/";
+  public CBBhoste = "http://localhost:8888/contratClientBiens/";
 
   //private  cbchost = "http://immo-agence.fr:8888/contrats/approuveContrat";
   private  cbchost = "http://localhost:8888/contrats/approuveContrat";
 
 
   //private  cbchost = "http://immo-agence.fr:8888/contrats/approuveContrat";
-  //private  cbdhost = "http://localhost:8888/contrats/approuveContrat";
+  private  cbdhost = "http://localhost:8888/contrats/approuveContrat";
 
   private url: String = "/particuliers/"
 

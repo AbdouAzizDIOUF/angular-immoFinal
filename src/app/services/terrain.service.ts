@@ -19,6 +19,10 @@ export class TerrainService {
     return this.http.get(this.thost);
   }
 
+  public getTerrainsDispo(){
+    return this.http.get(this.thost+"/search/terrainDispo");
+  }
+
   public createTerrain(terrain: Terrain): Observable<Object>{
     return this.http.post(`${this.thost}`, terrain);
   }
@@ -85,5 +89,11 @@ export class TerrainService {
 
   public getGlobalResource(){
     return this.globalService;
+  }
+
+  public url = "http://immo-agence.fr:8888/terrains/search/trouveTerrain?"
+  //public url = "http://localhost:8888/terrains/search/trouveTerrain?"
+  public rechercheBien(a,s,p){
+    return this.http.get(this.url+"adresse=+"+a+"&status="+s+"&price="+p);
   }
 }

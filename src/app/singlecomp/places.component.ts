@@ -5,9 +5,7 @@ import * as places from "places.js"
 
 @Component({
   selector: "app-places",
-  template: `
-    <input #input type="search" placeholder="adresse du bien" class="form-control" name="adresse"/>
-  `
+  template: `<input #input type="search" placeholder="adresse du bien" class="form-control" name="adresse"/>`
 })
 export class PlacesComponent implements AfterViewInit, OnDestroy, OnChanges {
   private instance = null;

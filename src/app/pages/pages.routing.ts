@@ -15,15 +15,13 @@ export const PagesRoutes: Routes = [
     {
         path: 'paiement',
         component: BookingComponent,
-        canActivate: [AuthGuardService],
-        data: {roles: ['CLIENT']}
+        canActivate: [AuthGuardService]
     },
 
     {
         path: 'monespace',
         component: MonespaceComponent,
-        canActivate: [AuthGuardService],
-        data: {roles: ['CLIENT']},
+        canActivate: [AuthGuardService]
     },
 
  ];

@@ -13,13 +13,17 @@ import {Terrain} from '../model/terrain';
 
 export class VillaService {
 
-  //public vhost = "http://immo-agence.fr:8888/villas";
+ // public vhost = "http://immo-agence.fr:8888/villas";
   public vhost = "http://localhost:8888/villas";
 
   constructor(private globalService: GlobalService, private http: HttpClient) { }
 
   public getVillas(){
     return this.http.get(this.vhost);
+  }
+
+  public getVillasDispo(){
+    return this.http.get(this.vhost+"/search/villaDispo");
   }
 
   public createVilla(villa: Villa): Observable<Object>{
@@ -88,5 +92,13 @@ export class VillaService {
 
   public getGlobalResource(){
     return this.globalService;
+  }
+
+
+  public url = "http://immo-agence.fr:8888/villas/search/trouveVilla?"
+  //public url = "http://localhost:8888/villas/search/trouveVilla?"
+
+  public rechercheBien(a,s,p){
+    return this.http.get(this.url+"adresse=+"+a+"&status="+s+"&price="+p);
   }
 }

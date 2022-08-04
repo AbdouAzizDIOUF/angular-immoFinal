@@ -13,6 +13,10 @@ import { PagesRoutes } from './pages.routing';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MonespaceComponent} from './Mon espace/Monespace.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgxPayPalModule } from 'ngx-paypal';
+
+
+
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
    // Change this to your upload POST address:
@@ -28,7 +32,8 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     CommonModule,
     GlobalModule,
     DropzoneModule,
-      NgbModule,
+    NgbModule,
+    NgxPayPalModule,
     RouterModule.forChild(PagesRoutes),
   ],
   declarations: [
@@ -36,7 +41,7 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     ContactComponent,
     AboutComponent,
     BookingComponent,
-    MonespaceComponent
+    MonespaceComponent,
   ],
   providers: [
    {

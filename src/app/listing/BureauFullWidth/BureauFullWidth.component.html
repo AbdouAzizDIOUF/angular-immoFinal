@@ -7,32 +7,34 @@
 			<div class="row">
 				<!-- Search -->
 				<div class="col-md-12 grid-full-width page-search mb-3">
-					<div class="main-search-input mt-0">
-						<div class="col-lg-3 col-sm-6">
-							<div class="form-group">
-								<label>
-									<input type="text" placeholder="Que cherchez-vous?" class="form-control">
-								</label>
+					<form action="">
+						<div class="main-search-input mt-0">
+							<div class="col-lg-3 col-sm-6">
+								<div class="form-group">
+									<label>
+										<input type="text" placeholder="donner une adrese" class="form-control" [(ngModel)]="rechercheBien.adresse" name="adresse">
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6">
+								<div class="form-group">
+									<label>
+										<input type="text" placeholder="A louer ou A vendre" class="form-control" [(ngModel)]="rechercheBien.status" name="status">
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6">
+								<div class="form-group">
+									<label>
+										<input type="text" placeholder="Price" class="form-control" [(ngModel)]="rechercheBien.price" name="price">
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6 text-right">
+								<button class="btn main-search-btn btn-radius btn-lg btn-primary text-white"><span class="btn-inner--text">Search</span></button>
 							</div>
 						</div>
-						<div class="col-lg-3 col-sm-6">
-							<div class="form-group">
-								<label>
-									<input type="text" placeholder="Location" class="form-control">
-								</label>
-							</div>
-						</div>
-						<div class="col-lg-3 col-sm-6">
-							<div class="form-group">
-								<label>
-									<input type="text" placeholder="Price" class="form-control">
-								</label>
-							</div>
-						</div>
-						<div class="col-lg-3 col-sm-6 text-right">
-							<a class="btn main-search-btn btn-radius btn-lg btn-primary text-white"><span class="btn-inner--text">Search</span></a>
-						</div>
-					</div>
+					</form>
 				</div>
 				<!-- Search Section / End -->
 				<div class="col-md-12">
@@ -42,7 +44,7 @@
 							<!-- Layout Switcher -->
 							<div class="layout-switcher">
 								<a class="grid active"><span class="round-pill d-block"><i class="fa fa-th"></i></span></a>
-								<a [routerLink]="['/biens/list/appartement']" class="list"><span class="round-pill d-block"><i class="fa fa-align-justify"></i></span></a>
+								<a class="list"><span class="round-pill d-block"><i class="fa fa-align-justify"></i></span></a>
 							</div>
 						</div>
 						<div class="col-md-6">

@@ -11,10 +11,15 @@ export class BureauService {
 
   //public bhost = "http://immo-agence.fr:8888/bureaus";
   public bhost = "http://localhost:8888/bureaus";
+
   constructor(private globalService: GlobalService, private http: HttpClient) { }
 
   public getBurreaus() {
     return this.http.get(this.bhost);
+  }
+
+  public getBurreausDispo() {
+    return this.http.get(this.bhost+"/search/bureauDispo");
   }
 
   public createBureau(bureau: Bureau): Observable<Object>{
@@ -83,5 +88,11 @@ export class BureauService {
 
   public getGlobalResource(){
     return this.globalService;
+  }
+
+  public url = "http://immo-agence.fr:8888/bureaus/search/trouveBureau?"
+  //public url = "http://localhost:8888/bureaus/search/trouveBureau?"
+  public rechercheBien(a,s,p){
+    return this.http.get(this.url+"adresse=+"+a+"&status="+s+"&price="+p);
   }
 }

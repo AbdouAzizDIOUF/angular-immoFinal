@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/core';
+import { ParticulierService } from 'src/app/services/particulier.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'admin-bookmarks',
@@ -8,40 +10,64 @@ import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/co
 })
 export class BookmarksComponent implements OnInit{
 
-   Data : any = [
-                  {
-                     image: 'assets/images/dp-1.jpg',
-                     title: 'Sticky Band',
-                     address: 'Bishop Avenue, New York',
-                     review: '(23 reviews)'
-                  },
-                  {
-                     image: 'assets/images/dp-2.jpg',
-                     title: 'Burger House',
-                     address: '2726 Shinn Street, New York',
-                     review: '(31 reviews)'
-                  },
-                  {
-                     image: 'assets/images/dp-3.jpg',
-                     title: 'Think Coffee',
-                     address: '215 Terry Lane, New York',
-                     review: '(23 reviews)'
-                  },
-                   {
-                     image: 'assets/images/dp-4.jpg',
-                     title: 'Koenna Brew',
-                     address: '3 Jane Lane, New York',
-                     review: '(8.7k reviews)'
-                  }
-               ];
+    public particuliers: any;
+    public entreprises: any;
 
-   constructor(){}
+    public listContratsByClient: any;
+    clientOne: Object;
 
-   ngOnInit(){}
+   constructor(private particulierService: ParticulierService, private router: Router){}
+
+   ngOnInit(){
+       this.getParticulers();
+   }
 
    ngAfterViewInit()
    {
 
       
    }
+
+    getParticulers() {
+       this.listContratsByClient = null;
+        this.entreprises=null;
+        this.particulierService.getClients()
+            .subscribe(data =>{
+                this.particuliers = data;
+            }, error => console.log(error));
+
+    }
+
+    getEntreprises() {
+
+    }
+
+    consulteClient(id: string) {
+
+    }
+
+    consulteContrat(id: string)
+    {
+       this.particuliers = null;
+
+        this.particulierService.getInformationPersonnel(id)
+            .subscribe(data =>{
+                this.clientOne = data;
+            }, error => console.log(error));
+       this.particulierService.listContratByClient(id)
+           .subscribe(data=>{
+               this.listContratsByClient = data;
+           }, error => {
+               console.log(error);
+           });
+
+    }
+
+    consulterPaiementByContrat(id: any) {
+
+    }
+
+    contacterClient(id: string){
+
+    }
 }

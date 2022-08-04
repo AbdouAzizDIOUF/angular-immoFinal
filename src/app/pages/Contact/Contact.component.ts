@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 export class ContactComponent implements OnInit{
 
     public mailModel: MailModel = new MailModel();
+
     registerForm: FormGroup;
     submitted = false;
     controleSubmit: true;

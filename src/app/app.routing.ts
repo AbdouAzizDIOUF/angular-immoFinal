@@ -9,15 +9,8 @@ import {BookingComponent} from './pages/Booking/Booking.component';
 import {MonespaceComponent} from './pages/Mon espace/Monespace.component';
 
 export const AppRoutes: Routes = [
-    {
-      path: '',
-      redirectTo: 'home',
-      pathMatch: 'full',
-    },
-    {
-      path: '',
-      component: FrontendPanelLayoutComponent,
-      children: [
+    {path: '', redirectTo: 'home', pathMatch: 'full',},
+    {path: '', component: FrontendPanelLayoutComponent, children: [
         {
           path: 'home',
           loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
@@ -45,15 +38,13 @@ export const AppRoutes: Routes = [
         {
           path: 'paiement',
           component: BookingComponent,
-          canActivate: [AuthGuardService],
-          data: {roles: ['CLIENT']},
+          canActivate: [AuthGuardService]
         },
       ]
     },
+
     {
-      path: 'admin',
-      component: AdminPanelLayoutComponent,
-      canActivate: [AuthGuardService],
+      path: 'admin', component: AdminPanelLayoutComponent, canActivate: [AuthGuardService],
       data: {roles: ['SUPERADMIN']},
       children: [{
         path: '',

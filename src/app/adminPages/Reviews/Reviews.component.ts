@@ -17,4 +17,12 @@ export class ReviewsComponent implements OnInit{
 
       
    }
+
+    getEntreprises() {
+
+    }
+
+    getParticulers() {
+
+    }
 }

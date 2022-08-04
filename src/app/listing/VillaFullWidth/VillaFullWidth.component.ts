@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/co
 import {Router} from '@angular/router';
 import {BureauService} from '../../services/bureau.service';
 import { VillaService } from 'src/app/services/villa.service';
+import {Rechercher} from '../../model/rechercher';
 
 // @ts-ignore
 @Component({
@@ -14,6 +15,9 @@ export class VillaFullWidthComponent implements OnInit{
 
     public villas: any;
 
+    public bienRechercher: any;
+
+    public rechercheBien: Rechercher = new Rechercher();
 
     constructor(public router: Router, public villaService: VillaService ){}
 

@@ -16,7 +16,7 @@ import {StudioDetailOneComponent} from './StudioDetailOne/StudioDetailOne.compon
 
 export const ListingRoutes: Routes = [
 
-    //{path: 'list/full-width', component: ListFullWidthComponent},
+    {path: '', component: AppartementFullWidthComponent},
     {path: 'appartement', component: AppartementFullWidthComponent},
     {path: 'bureau', component: BureauFullWidthComponent},
     {path: 'studio', component: StudioFullWidthComponent},

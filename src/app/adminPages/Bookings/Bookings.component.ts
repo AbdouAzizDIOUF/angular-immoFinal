@@ -17,4 +17,12 @@ export class BookingsComponent implements OnInit{
 
       
    }
+
+    getPaiementLocations() {
+
+    }
+
+    getPaiementVentes(){
+
+    }
 }

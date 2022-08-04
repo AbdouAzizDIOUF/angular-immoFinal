@@ -9,8 +9,8 @@ import {Observable} from 'rxjs';
 })
 export class MailServiceService{
 
-    private  mail: string = "http://immo-agence.fr:8888/mail/send";
-   // private  mail: string = "http://localhost:8888/mail/send";
+    //private  mail: string = "http://immo-agence.fr:8888/mail/send";
+   private  mail: string = "http://localhost:8888/mail/send";
 
     constructor(private httpClient: HttpClient, public globalService: GlobalService) {
     }

@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ParticulierService {
 
-  //public phost: string = "http://immo-agence.fr:8888/particuliers";
+  //public phost: string = "http://immo-agence.fr:8888/particuliers/";
 
   public phost: string = "http://localhost:8888/particuliers/";
 
@@ -20,6 +20,12 @@ export class ParticulierService {
     return this.http.get(this.phost);
   }
 
+
+  //public url = "http://immo-agence.fr:8888/particuliers/"
+  public url = "http://localhost:8888/particuliers/"
+  public listContratByClient(id: string){
+    return this.http.get(this.url+id+"/contratClientBiens")
+  }
 
 
 }

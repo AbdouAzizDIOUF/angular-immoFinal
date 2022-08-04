@@ -22,6 +22,10 @@ export class AppartementService {
     return this.http.get(this.ahost);
   }
 
+  public getAppartementsDispo(){
+    return this.http.get(this.ahost+"/search/appartementDispo");
+  }
+
   public createAppartement(appartement: Appartement): Observable<Object>{
     return this.http.post(`${this.ahost}`, appartement);
   }
@@ -88,5 +92,36 @@ export class AppartementService {
 
   public getGlobalResource(){
     return this.globalService;
+  }
+
+
+  public url = "http://immo-agence.fr:8888/appartements/search/trouveAppartement?"
+  //public url = "http://localhost:8888/appartements/search/trouveAppartement?"
+  public rechercheBien(a,s,p){
+    return this.http.get(this.url+"adresse=+"+a+"&status="+s+"&price="+p);
+  }
+
+  public url2 = "http://immo-agence.fr:8888/appartements/search/trouveAppartement2?"
+  //public url2 = "http://localhost:8888/appartements/search/trouveAppartement2?"
+  public rechercheBien2(a,s,p){
+    return this.http.get(this.url+"adresse=+"+a+"&status="+s+"&price="+p);
+  }
+
+  public url3 = "http://immo-agence.fr:8888/appartements/search/trouveAppartementStatus?"
+  //public url3 = "http://localhost:8888/appartements/search/trouveAppartementStatus?"
+  public rechercheBienStatus(s){
+    return this.http.get(this.url+"status=+"+s);
+  }
+
+  public url4 = "http://immo-agence.fr:8888/appartements/search/trouveAppartementAdresse?"
+  //public url4 = "http://localhost:8888/appartements/search/trouveAppartementAdresse?"
+  public rechercheBienAdresse(s){
+    return this.http.get(this.url+"adresse=+"+s);
+  }
+
+  public url5 = "http://immo-agence.fr:8888/appartements/search/trouveAppartementPrice?"
+  //public url5 = "http://localhost:8888/appartements/search/trouveAppartementPrice?"
+  public rechercheBienPrice(s){
+    return this.http.get(this.url+"price=+"+s);
   }
 }

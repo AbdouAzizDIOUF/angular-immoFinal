@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/co
 import {Router} from '@angular/router';
 import {AppartementService} from '../../services/appartement.service';
 import { BureauService } from 'src/app/services/bureau.service';
+import {Rechercher} from '../../model/rechercher';
 
 // @ts-ignore
 @Component({
@@ -14,6 +15,9 @@ export class BureauFullWidthComponent implements OnInit{
 
     public bureaux: any;
 
+    public bienRechercher: any;
+
+    public rechercheBien: Rechercher = new Rechercher();
 
     constructor(public router: Router, public bureauService: BureauService ){}
 
@@ -22,7 +26,7 @@ export class BureauFullWidthComponent implements OnInit{
     }
 
     public getBureaux(){
-        this.bureauService.getBurreaus()
+        this.bureauService.getBurreausDispo()
             .subscribe(data=>{
                 //console.log(data._embedded.appartements);
                 // @ts-ignore

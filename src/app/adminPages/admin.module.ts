@@ -12,7 +12,6 @@ import { ReviewsComponent } from './Reviews/Reviews.component';
 import { BookmarksComponent } from './Bookmarks/Bookmarks.component';
 import { ListComponent } from './List/List.component';
 import { AddListComponent } from './AddList/AddList.component';
-import { ProfileComponent } from './Profile/Profile.component';
 
 import { AdminRoutes } from './admin.routing';
 import {FormsModule} from '@angular/forms';
@@ -41,7 +40,6 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     BookmarksComponent,
     ListComponent,
     AddListComponent,
-    ProfileComponent,
     PlacesComponent,
   ],
 

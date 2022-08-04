@@ -7,7 +7,6 @@ import { ReviewsComponent } from './Reviews/Reviews.component';
 import { BookmarksComponent } from './Bookmarks/Bookmarks.component';
 import { ListComponent } from './List/List.component';
 import { AddListComponent } from './AddList/AddList.component';
-import { ProfileComponent } from './Profile/Profile.component';
 
 export const AdminRoutes: Routes = [
     {
@@ -32,20 +31,15 @@ export const AdminRoutes: Routes = [
       component: ReviewsComponent
     },
     {
-      path: 'bookmarks',
+      path: 'clients',
       component: BookmarksComponent
     },
-    {
+    /*{
       path: 'list',
       component: ListComponent
-    },
+    },*/
     {
       path: 'add-list',
       component: AddListComponent
-    },
-    {
-      path: 'profile',
-      component: ProfileComponent
     }
-
 ];

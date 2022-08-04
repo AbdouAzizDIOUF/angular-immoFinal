@@ -74,6 +74,9 @@ export class GlobalService {
   }
 
 
+
+
+
   /**
    * upload d'image
    *

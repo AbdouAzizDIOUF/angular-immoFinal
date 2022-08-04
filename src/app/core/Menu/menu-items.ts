@@ -17,7 +17,6 @@ const MENUITEMS = [
             {state: 'appartement', name: 'Appartement', type: 'link'},
             {state:'bureau', name: 'Bureau', type: 'link',},
             {state:'villa', name: 'Villa', type: 'link',},
-            {state:'studio', name: 'Studio', type: 'link',},
             {state:'parcelle', name: 'Parcelle', type: 'link',},
         ]
     },

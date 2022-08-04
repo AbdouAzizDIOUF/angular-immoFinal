@@ -28,24 +28,22 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PopupMessageComponent } from './alets/popup-message/popup-message.component';
 import { PopupConfirmeDemandeComponent } from './alets/popup-confirme-demande/popup-confirme-demande.component';
 import { PopupConfirmeDeleteComponent } from './alets/popup-confirme-delete/popup-confirme-delete.component';
+import {NgxPayPalModule} from 'ngx-paypal';
 
 // initialisation de la service keycloakSecurity avant la demarrage de l'appli
 function initializeKeycloak(keycloak: KeycloakService) {
     return () =>
         keycloak.init({
             config: {
+                /*url:"http://localhost:8889/auth/",
+                realm:"IMMO-REALM",
+                clientId:"angular"*/
                 url:"http://localhost:8889/auth/",
                 realm:"IMMO-REALM",
-                clientId:"angular"
+                clientId:"angularLocal"
                 /*url: "http://immo-agence.fr:8889/auth/",
                 realm: "IMMO-REALM",
                 clientId: "angular"*/
-                /*url:"http://immo-agence.fr:8889/auth/",
-                realm:"IMMO AGENCE",
-                clientId:"AngularImmoApp"*/
-               /* url: 'http://localhost:8889/auth/',
-                realm: 'immo-realmTest',
-                clientId: 'GuardTest',*/
             },
             initOptions: {
                 onLoad: 'check-sso',
@@ -88,7 +86,8 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
         KeycloakAngularModule,
         FormsModule,
         ReactiveFormsModule,
-        NgbModule
+        NgbModule,
+        NgxPayPalModule,
 
     ],
     providers: [

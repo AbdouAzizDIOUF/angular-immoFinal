@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/co
 import {Router} from '@angular/router';
 import {BureauService} from '../../services/bureau.service';
 import { TerrainService } from 'src/app/services/terrain.service';
+import {Rechercher} from '../../model/rechercher';
 
 // @ts-ignore
 @Component({
@@ -14,6 +15,9 @@ export class TerrainFullWidthComponent implements OnInit{
 
     public terrains: any;
 
+    public bienRechercher: any;
+
+    public rechercheBien: Rechercher = new Rechercher();
 
     constructor(public router: Router, public terrainService: TerrainService ){}
 
@@ -22,7 +26,7 @@ export class TerrainFullWidthComponent implements OnInit{
     }
 
     public getTerrains(){
-        this.terrainService.getTerrain()
+        this.terrainService.getTerrainsDispo()
             .subscribe(data=>{
                 //console.log(data._embedded.appartements);
                 // @ts-ignore
